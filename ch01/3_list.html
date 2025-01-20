@@ -8,7 +8,7 @@
  <body>
 
     <!-- 순서 없는 리스트 -->
-     <!-- <ul>에는 내용을 절대 적지 않는다. </ul>이 없어도 된다. -->
+    <!-- <ul : unordered list>에는 내용을 절대 적지 않는다. </ul>이 없어도 된다. -->
     <ul>
         <li>장동건
             <ul>
@@ -24,6 +24,75 @@
         <li>차태현</li>
     </ul>
 
+    <!-- 순서 있는 리스트 -->
+    <!-- <ol : ordered list> -->
+    <ol type="a">   
+      <li>장동건</li>
+      <li>고소영</li>
+      <li>전지현</li>
+      <li>차태현</li>
+    </ol>
+
+    <ol type="A">   
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+      </ol>
+
+     <ol type="i">   
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+    </ol>
+
+    <ol type="I">           <!-- 역순-->
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+    </ol>
+
+    <ol reversed>             <!-- 역순-->
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+    </ol>
+
+    <ol reversed="reversed">   <!-- 역순(위와 표현법의 차이, 같은 결과)-->
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+    </ol>
+
+    <ol start="10">            <!-- 시작을 '10'부터 한다는 뜻 -->
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+    </ol>
+
+    <ol start="10" type="a">   <!-- 시작을 '10(알파벳 10번째 소문자 'j')'부터 한다는 뜻 -->
+        <li>장동건</li>
+        <li>고소영</li>
+        <li>전지현</li>
+        <li>차태현</li>
+    </ol>
+
+
+        <!-- 데이터 정의 리스트 -->
+    <!-- Discription-List, Discription -Term, Discription-Discription> -->
+     <di>
+        <dt>개강파티</dt>
+        <dd>날짜 : 2022.07.01.Fri. 20:00 ~ </dd>
+        <dd>드레스코드 : 청바지, 블랙티셔츠</dd>
+        <dd>회비 : 엔빵</dd>
+        <dd>문의사항 : 반장에게 슬랙으로</dd>
+
+    </di>
 
  </body>
  </html>
