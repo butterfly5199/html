@@ -1,7 +1,9 @@
  <!DOCTYPE html>
  <html lang="en">
  <head>
-    <meta charset="UTF-8">
+            shorthand property for setting border width, style, and colr
+    <meta ch
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
@@ -27,9 +29,9 @@
             <tr>
                 <td>10</td>
                 <td>장원영</td>
-                <td>excitingmvr@gamil.com</td>
-                <td>서울특별시 성동구 동일로</td>
-                <td>123-456</td>
+                <td colspan="2">excitingmvr@gamil.com</td>      <!-- colspan : 가로열을 "n"개 만큼 병합 -->
+                <!-- <td>서울특별시 성동구 동일로</td> -->        <!-- 열 정리를 위해 병합되는 칸 내용 생략 처리 -->
+                <td rowspan="2">123-456</td>                    <!-- rowspan : 세로열을 "n"개 만큼 병합 -->
                 <td>010-999-9999</td>
             </tr>
             <tr>
@@ -37,36 +39,11 @@
                 <td>장원영</td>
                 <td>excitingmvr@gamil.com</td>
                 <td>서울특별시 성동구 동일로</td>
-                <td>123-456</td>
+                <!--<td>123-456</td> -->                        <!-- 열 정리를 위해 병합되는 칸 내용 생략 처리 -->
                 <td>010-999-9999</td>
             </tr>
-            <tr>
-                <td>8</td>
-                <td>장원영</td>
-                <td>excitingmvr@gamil.com</td>
-                <td>서울특별시 성동구 동일로</td>
-                <td>123-456</td>
-                <td>010-999-9999</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>장원영</td>
-                <td>excitingmvr@gamil.com</td>
-                <td>서울특별시 성동구 동일로</td>
-                <td>123-456</td>
-                <td>010-999-9999</td>
-            </tr>
-        <tfoot>
-
-        </tfoot>
-
         </tbody>
+    </table>  
 
-
-    </table>
-
-
-
-    
  </body>
  </html>
