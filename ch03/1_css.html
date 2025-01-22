@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="./css/style.css" rel="stylesheet" type="text/css">	외부 스타일 시트
+    <link href="./css/style2.css" rel="stylesheet" type="text/css">	외부 스타일 시트
+    <!-- 가장 마지막 스타일이 적용이 된다. -->
+    <!-- 단 인라인이 존재할 경우 인라인이 가장 우세 -->    
+	
+    <style type="text/css">
+		
+		/* 내부 스타일 쉬트 */
+        /* internal */
+		
+		p {
+			background-color: gray;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+    <!-- inline -->
+	<!-- <p style="background-color: red; color: white;">골든글로브 받은 오영수 "처음 내 자신에 '괜찮은 놈' 칭찬"</p>	인라인 스타일 쉬트 -->
+	<p>골든글로브 받은 오영수 "처음 내 자신에 '괜찮은 놈' 칭찬"</p>
+</body>
+</html>
