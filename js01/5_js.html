@@ -23,7 +23,7 @@
         // for(let i=1; i<=10; i++){
         //     console.log(i);
         //     sum = sum + i; 
-        //     // console.log(i + " | " +sum);
+        //     console.log(i + " | " + sum);
         // }
 
 
@@ -46,12 +46,13 @@
         //         if(j % 2 == 0) {
         //             console.log(i + " * " + j + " = " + sum);
         //         } else {
-
         //         }
         //     }
         //     console.log("---------------");
         // }
 
+//--------------------------------------------------------------------------//
+// <별트리 만들기> //
 
         // *1
         // **2
@@ -83,12 +84,28 @@
             console.log(tree)
         }
 
-// < 방법 2>
-        // const level = 5;
+// < 방법 2 > : const 선언 활용
+        const level = 5;
 
-        // for (let i = 1; i <= level; i++) {
-        // console.log(" ".repeat(level - i) + "*".repeat(i * 2 - 1));
-        // }
+        for (let i = 1; i <= level; i++) {
+        console.log(" ".repeat(level - i) + "*".repeat(i * 2 - 1));
+        }
+
+
+// < 방법 3 > : function 함수 활용
+        function christmasTree(height) {
+            var tree = [];
+            for(var i = 1; i <= height; i++) {
+                tree.push(" ".repeat(height - i) + "*".repeat((i - 1) * 2 + 1) + " ".repeat(height - i));
+            }
+            return tree.join("n");
+            }
+            
+            String.prototype.repeat = function(n)
+            {
+                return new Array(n+1).join(this);
+            }
+
 
 
         //     *
