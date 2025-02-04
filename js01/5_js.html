@@ -44,7 +44,7 @@
         //         sum = i*j;
 
         //         if(j % 2 == 0) {
-        //             console.log(i + "*" + j + "=" + sum);
+        //             console.log(i + " * " + j + " = " + sum);
         //         } else {
 
         //         }
@@ -70,13 +70,25 @@
         //  ********
         // **********
 
-        cost level = 1;
-        for(let i=1; i<=level; i++){
-            for(let j=1; j<=(level-1)*2; j++){
+        const level = 5;
 
-            } 
-            
+        for (let i = 1; i <= level; i++){
+            let tree = "";
+            for (let k = 1; k<=level-i; k++) {
+                tree = tree + " "
+            }
+            for (let j = 1; j <= i*2 -1 ; j++){
+                tree = tree + "*"
+            }
+            console.log(tree)
         }
+
+// < 방법 2>
+        // const level = 5;
+
+        // for (let i = 1; i <= level; i++) {
+        // console.log(" ".repeat(level - i) + "*".repeat(i * 2 - 1));
+        // }
 
 
         //     *
