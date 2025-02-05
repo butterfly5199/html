@@ -11,28 +11,28 @@
         // 두 정수를 주고 몇 사분면인지 확인
 
         function kkkk(x,y) {
-            var result = 1;
+            var result = 0;
 
             if (x == 0 && y == 0) {
-                console.log("원점에 있습니다.");
+                document.write("원점에 있습니다.");
             } else if (x == 0 || y == 0) {
                 if (x == 0) {
-                    console.log("y선에 있습니다.");
+                    document.write("y선에 있습니다.");
                 } else {
-                    console.log("x선에 있습니다.");
+                    document.write("x선에 있습니다.");
                 }
             } else {
                 if (x > 0) {
                     if (y > 0) {
-                        console.log("1사분면에 있습니다.");
+                        document.write("1사분면에 있습니다.");
                     } else {
-                        console.log("4사분면에 있습니다.");
+                        document.write("4사분면에 있습니다.");
                     }
                 } else {
                     if (y > 0) {
-                        console.log("2사분면에 있습니다.");
+                        document.write("2사분면에 있습니다.");
                     } else {
-                        console.log("3사분면에 있습니다.");
+                        document.write("3사분면에 있습니다.");
                     }
                 }
             }
