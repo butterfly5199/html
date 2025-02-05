@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        // "장원영"을 받으면
+        // "이쁘다"라는 값을 받아서 출력
+
+        // "전지현"을 받으면
+        // "잠잔다"라는 값을 받아서 출력
+
+        // 단 switch 문을 사용하여 만들 것
+
+        // [alert]
+
+        function aa(a) {
+
+            switch(a) {
+                case "장원영":
+                    alert ("이쁘다");
+                    break;
+                case "전지현":
+                    alert ("잠잔다");
+                    break;
+                default:
+                    alert ("아무것도 없습니다.");
+                    break;        
+            }
+        }
+        
+        aa("장원영");
+
+        // [return]
+
+        function aaa(a) {
+
+            switch(a) {
+                case "장원영":
+                    return "이쁘다";
+                    break;
+                case "전지현":
+                    return "잠잔다";
+                    break;
+                default:
+                    return "아무것도 없습니다.";
+                    break;        
+            }
+        }
+            
+        var bb = aaa("장원영");
+        alert(bb);
+
+    </script>
+    
+</body>
+</html>
