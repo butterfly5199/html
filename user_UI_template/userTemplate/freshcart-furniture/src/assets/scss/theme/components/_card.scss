@@ -1,0 +1,77 @@
+// product card
+
+.product-card {
+  position: relative;
+  .product-card-img {
+    position: relative;
+    &:hover {
+      .product-img-hover {
+        opacity: 1;
+      }
+    }
+
+    .product-card-btn {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 12px;
+      transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s ease-in-out,
+        visibility 0.2s ease-in-out;
+      transform: translateY(5px);
+    }
+    .product-img-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+  }
+  .product-heading {
+    background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.2lh) / 0 2px no-repeat;
+    transition: background-size 0.3s ease-in-out;
+    padding-bottom: 2px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    .product-card-btn {
+      opacity: 1;
+
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .product-heading {
+      background-size: 100% 2px;
+      text-decoration: none;
+    }
+  }
+}
+
+// card animation
+
+.card-animation {
+  cursor: pointer;
+  .link-animation {
+    transform: translate(calc(1 * 16px));
+    transition: transform 0.2s;
+  }
+  .circle-chevron {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  &:hover {
+    .link-animation {
+      transform: translate(0);
+    }
+    .circle-chevron {
+      opacity: 1;
+    }
+  }
+}

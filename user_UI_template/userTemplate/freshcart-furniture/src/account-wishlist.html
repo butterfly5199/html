@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="@@webRoot/node_modules/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="@@webRoot/node_modules/drift-zoom/dist/drift-basic.min.css" />
+  @@include("partials/head-links.html")
+
+  <title>Account Wishlist eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+  @@include("partials/top-bar.html") @@include("partials/navbar.html")
+  <section class="py-lg-8 py-5">
+    <div class="container">
+      <div class="row">
+        <!--Account sidebar start-->
+        <div class="col-lg-3 col-md-4">
+
+          @@include("partials/navbar-account.html")
+        </div>
+        <!--Account sidebar end-->
+        <div class="col-lg-9 col-md-8">
+          <div class="row g-3 mb-4 align-items-center">
+            <div class="col-lg-9 col-md-6 col-4">
+              <h1 class="mb-0 h2">Wishlist</h1>
+            </div>
+            <div class="col-lg-3 col-md-6 col-8 text-end">
+              <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#wishlistModal">+ Add
+                Wishlist</a>
+            </div>
+
+
+
+
+          </div>
+          <div class="row g-3 mb-4">
+            <div class="col-lg-8 col-12">
+              <h2 class="mb-0 h3">Living Room Ideas</h2>
+            </div>
+            <div class="col-lg-4 col-12 text-lg-end">
+              <!--Dropdown -->
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" data-bs-auto-close="outside">
+                  Select Wishlist
+                </button>
+                <div class="dropdown-menu p-3">
+                  <div class="d-flex flex-column gap-1 mb-2">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="wishlist-1" name="wishlist" checked="">
+                      <label for="wishlist-1" class="form-check-label text-body">Living Room Ideas</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="wishlist-2" name="wishlist">
+                      <label for="wishlist-2" class="form-check-label text-body">Office Décor</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="wishlist-3" name="wishlist">
+                      <label for="wishlist-3" class="form-check-label text-body">Bedroom Renovation</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="wishlist-4" name="wishlist">
+                      <label for="wishlist-4" class="form-check-label text-body">Summer Sale Picks</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="wishlist-5" name="wishlist">
+                      <label for="wishlist-5" class="form-check-label text-body">Limited Stock Favorites</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+          <div class="row gy-6 gx-4">
+            <!--Product-->
+            <div class="col-lg-4 col-md-6">
+              <div class="product-card">
+                <div class="border text-center product-card-img mb-4">
+                  <a href="#!">
+                    <img src="./assets/images/product/product-img-7.jpg" alt="product image" class="img-fluid" />
+                  </a>
+                  <div class="product-card-btn">
+                    <button type="button" class="btn btn-primary btn-icon btn-sm animate-pulse " data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                        <path
+                          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                      </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary  btn-sm quick-add-btn"
+                      data-product-name="Modern metal frame stool" data-product-price="85.00"
+                      data-product-img="./assets/images/product/product-img-7.jpg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                      </svg>
+                      Quick add
+                    </button>
+                  </div>
+                  <div class="form-check position-absolute end-0  top-0 p-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheckQuick" checked>
+                    <label class="form-check-label visually-hidden" for="exampleCheckQuick">Check me out</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-medium text-uppercase">BRAND</span>
+                  <div class="d-flex gap-3 align-items-center">
+                    <span class="">
+                      4.3
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-star-fill align-baseline text-warning" viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                    </span>
+                    <button type="button" class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">Stylish Wooden Table Lamp</h3>
+                  <p class="mb-0 lh-1 text-dark fw-semibold">$78.00</p>
+                </div>
+
+
+              </div>
+            </div>
+            <!--Product-->
+            <div class="col-lg-4 col-md-6">
+              <div class="product-card">
+                <div class="border text-center product-card-img mb-4">
+                  <a href="#!"> <img src="./assets/images/product/product-img-8.jpg" alt="product image"
+                      class="img-fluid" /></a>
+                  <div class="product-card-btn">
+                    <button type="button" class="btn btn-primary btn-icon btn-sm animate-pulse " data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                        <path
+                          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                      </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm quick-add-btn"
+                      data-product-name="Sofa with wood legs" data-product-price="34.00"
+                      data-product-img="./assets/images/product/product-img-8.jpg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                      </svg>
+                      Quick add
+                    </button>
+
+                  </div>
+                  <div class="position-absolute top-0 p-2 px-3">
+                    <span class="badge bg-warning text-primary">Sold Out</span>
+                  </div>
+                  <div class="form-check position-absolute end-0  top-0 p-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                    <label class="form-check-label visually-hidden" for="exampleCheck1">Check me out</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-medium text-uppercase">BRAND</span>
+                  <div class="d-flex gap-3 align-items-center">
+                    <span class="">
+                      4.2
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-star-fill align-baseline text-warning" viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                    </span>
+                    <button type="button" class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">Assortment of Tumblerp</h3>
+                  <p class="mb-0 lh-1 text-dark fw-semibold">$34.00</p>
+                </div>
+                <div role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradioprimary" checked />
+                  <label class="btn-color-swatch bg-primary" for="btnradioprimary"></label>
+
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradioinfo" />
+                  <label class="btn-color-swatch bg-info" for="btnradioinfo"></label>
+
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradiosuccess" />
+                  <label class="btn-color-swatch bg-success" for="btnradiosuccess"></label>
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio7" />
+                  <label class="btn-color-swatch bg-primary" for="btnradio7"></label>
+                </div>
+
+              </div>
+            </div>
+            <!--Product-->
+            <div class="col-lg-4 col-md-6">
+              <div class="product-card">
+                <div class="border text-center product-card-img mb-4">
+                  <a href="#!"> <img src="./assets/images/product/product-img-10.jpg" alt="product image"
+                      class="img-fluid" /></a>
+                  <div class="product-card-btn">
+                    <button type="button" class="btn btn-primary btn-icon btn-sm animate-pulse " data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                        <path
+                          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                      </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary  btn-sm quick-add-btn"
+                      data-product-name="Sofa with wood legs" data-product-price="14.00"
+                      data-product-img="./assets/images/product/product-img-10.jpg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                      </svg>
+                      Quick add
+                    </button>
+                  </div>
+                  <div class="position-absolute top-0 p-2 px-3">
+                    <span class="badge bg-danger ">On Sale</span>
+                  </div>
+                  <div class="form-check position-absolute end-0  top-0 p-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheckSale">
+                    <label class="form-check-label visually-hidden" for="exampleCheckSale">Check me out</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-medium text-uppercase">BRAND</span>
+                  <div class="d-flex gap-3 align-items-center">
+                    <span class="">
+                      4.5
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-star-fill align-baseline text-warning" viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                    </span>
+                    <button type="button" class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="">
+                  <h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">Succulent Plant Pot</h3>
+                  <p class="mb-0 lh-1 text-dark fw-semibold">
+                    <span class="text-danger">$14.00</span>
+                    <span class="text-decoration-line-through">$15.00</span>
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+            <!--Product-->
+            <div class="col-lg-4 col-md-6">
+              <div class="product-card">
+                <div class="border text-center product-card-img mb-4">
+                  <a href="#!"> <img src="./assets/images/product/product-img-3.jpg" alt="product image"
+                      class="img-fluid" /></a>
+                  <div class="product-card-btn">
+                    <button type="button" class="btn btn-primary btn-icon btn-sm animate-pulse " data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                        <path
+                          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                      </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary  btn-sm quick-add-btn"
+                      data-product-name="Comfort Seat Chair" data-product-price="78.00"
+                      data-product-img="./assets/images/product/product-img-3.jpg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                      </svg>
+                      Quick add
+                    </button>
+                  </div>
+                  <div class="position-absolute top-0 p-2 px-3">
+                    <span class="badge bg-info text-Info">New</span>
+                  </div>
+                  <div class="form-check position-absolute end-0  top-0 p-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheckNew">
+                    <label class="form-check-label visually-hidden" for="exampleCheckNew">Check me out</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-medium text-uppercase">BRAND</span>
+                  <div class="d-flex gap-3 align-items-center">
+                    <span class="">
+                      4.2
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-star-fill align-baseline text-warning" viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                    </span>
+                    <button type="button" class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="">
+                  <h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">Stylish Wooden Lamp</h3>
+                  <p class="mb-0 lh-1 text-dark fw-semibold">$78.00</p>
+                </div>
+
+
+              </div>
+            </div>
+            <!--Product-->
+            <div class="col-lg-4 col-md-6">
+              <div class="product-card">
+                <div class="border text-center product-card-img mb-4">
+                  <a href="#!"><img src="./assets/images/product/product-img-5.jpg" alt="product image"
+                      class="img-fluid" /></a>
+                  <div class="product-card-btn">
+                    <button type="button" class="btn btn-primary btn-icon btn-sm animate-pulse " data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                        <path
+                          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                      </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary  btn-sm quick-add-btn"
+                      data-product-name="High Back Boss Chair" data-product-price="75.00"
+                      data-product-img="./assets/images/product/product-img-5.jpg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                      </svg>
+                      Quick add
+                    </button>
+                  </div>
+                  <div class="position-absolute top-0 p-2 px-3">
+                    <span class="badge bg-danger">Save $20.00</span>
+                  </div>
+                  <div class="form-check position-absolute end-0  top-0 p-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheckSave">
+                    <label class="form-check-label visually-hidden" for="exampleCheckSave">Check me out</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-medium text-uppercase">BRAND</span>
+                  <div class="d-flex gap-3 align-items-center">
+                    <span class="">
+                      4.7
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-star-fill align-baseline text-warning" viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                    </span>
+                    <button type="button" class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">Assortment of Tumbler</h3>
+                  <p class="mb-0 lh-1 text-dark fw-semibold">
+                    <span class="text-danger">$75.00</span>
+                    <span class="text-decoration-line-through">$95.00</span>
+                  </p>
+                </div>
+                <div role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked />
+                  <label class="btn-color-swatch bg-primary" for="btnradio1"></label>
+
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" />
+                  <label class="btn-color-swatch bg-info" for="btnradio2"></label>
+
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" />
+                  <label class="btn-color-swatch bg-success" for="btnradio3"></label>
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" />
+                  <label class="btn-color-swatch bg-primary" for="btnradio4"></label>
+                </div>
+
+              </div>
+            </div>
+            <!--Product-->
+            <div class="col-lg-4 col-md-6">
+              <div class="product-card">
+                <div class="border text-center product-card-img mb-4">
+                  <a href="#!"><img src="./assets/images/product/product-img-2.jpg" alt="product image"
+                      class="img-fluid" /></a>
+                  <div class="product-card-btn">
+                    <button type="button" class="btn btn-primary btn-icon btn-sm animate-pulse " data-bs-toggle="modal"
+                      data-bs-target="#quickViewModal">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-eye animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                        <path
+                          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                      </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm quick-add-btn" data-product-name="Floor Lamp"
+                      data-product-price="14.00" data-product-img="./assets/images/product/product-img-2.jpg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                      </svg>
+                      Quick add
+                    </button>
+                  </div>
+                  <div class="position-absolute top-0 p-2 px-3">
+                    <span class="badge bg-danger">On Sale</span>
+                  </div>
+                  <div class="form-check position-absolute end-0  top-0 p-3">
+                    <input type="checkbox" class="form-check-input" id="exampleCheckOn">
+                    <label class="form-check-label visually-hidden" for="exampleCheckOn">Check me out</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-medium text-uppercase">BRAND</span>
+                  <div class="d-flex gap-3 align-items-center">
+                    <span class="">
+                      4.3
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-star-fill align-baseline text-warning" viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                      </svg>
+                    </span>
+                    <button type="button" class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart animate-target" viewBox="0 0 16 16">
+                        <path
+                          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">Succulent Plant Pot</h3>
+                  <p class="mb-0 lh-1 text-dark fw-semibold">
+                    <span class="text-danger">$14.00</span>
+                    <span class="text-decoration-line-through">$15.00</span>
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  @@include("partials/footer.html") @@include("partials/btn-scroll-top.html")@@include("partials/addtocart.html")
+  @@include("partials/quickview.html")
+  @@include("partials/scripts.html")
+  <!--modal-->
+  <div class="modal fade " id="wishlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-5 d-flex flex-column gap-4">
+        <div class="d-flex flex-row align-items-center justify-content-between">
+          <h2 class="modal-title fs-5" id="wishlistModalLabel">Create New Wishlist</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+
+          <form class="needs-validation" novalidate>
+            <div class="row gy-3">
+              <!-- row -->
+
+
+              <div class="col-12">
+                <!-- input -->
+
+                <label for="accountWishList" class="form-label visually-hidden">Wishlist name*</label>
+
+                <input type="text" class="form-control" id="accountWishList" placeholder="Wishlist name*" required />
+
+                <div class="invalid-feedback">Please enter wishlist name.</div>
+
+              </div>
+              <div class="col-12">
+                <label for="accountDescription" class="form-label visually-hidden">Descriptions</label>
+                <textarea class="form-control" id="accountDescription" placeholder="Descriptions" rows="4"
+                  required></textarea>
+                <div class="invalid-feedback">
+                  Please enter a Descriptions.
+                </div>
+              </div>
+              <div class="col-12">
+                <select data-choices data-choices-removeitembutton="true" data-choices-classname="form-select"
+                  aria-label="Default select example">
+                  <option value="">Private</option>
+                  <option value="1">Public</option>
+                  <option value="2">Shared</option>
+
+                </select>
+
+                <div class="invalid-feedback">Example invalid select feedback</div>
+              </div>
+              <!-- btn -->
+              <div class="d-flex gap-3">
+                <button type="submit" class="btn btn-secondary w-100" data-bs-dismiss="modal"
+                  data-bs-target="#wishlistModal">Cancel</button>
+
+                <button type="submit" class="btn btn-primary w-100">Create wishlist</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  <script src="@@webRoot/assets/js/vendors/flag.js"></script>
+  <script src="@@webRoot/assets/js/vendors/add-to-cart.js"></script>
+  <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+  <script src="@@webRoot/assets/js/vendors/btn-scrolltop.js"></script>
+  <script src="@@webRoot/assets/js/vendors/sidenav.js"></script>
+  <script src="@@webRoot/node_modules/drift-zoom/dist/Drift.min.js"></script>
+  <script src="@@webRoot/assets/js/vendors/drift.js"></script>
+  <script src="@@webRoot/assets/js/vendors/color-change.js"></script>
+  <script src="@@webRoot/assets/js/vendors/qty-input.js"></script>
+
+</body>
+
+</html>

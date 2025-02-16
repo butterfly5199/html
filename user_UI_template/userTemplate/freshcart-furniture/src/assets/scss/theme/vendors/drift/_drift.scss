@@ -1,0 +1,61 @@
+/* Zoom pane styles */
+
+.drift-zoom-pane {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 450px;
+}
+
+/* Container for the zoom effect */
+.zoom-container {
+  overflow: visible; /* Ensures the image stays within the boundaries */
+  position: relative;
+}
+
+/* Ensure the image is positioned relative to its parent */
+/* Ensure the image is positioned relative to its parent */
+.drift {
+  position: relative; /* Allows z-index to take effect */
+  z-index: 1; /* Lower z-index */
+}
+
+.drift-pane {
+  z-index: 1000 !important;
+}
+
+/* Zoom pane container */
+#zoomPane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Higher than the image */
+  width: 100%; /* Take up full width */
+  height: 100%; /* Take up full height */
+}
+
+/* Image zoom effect */
+.zoom-container img {
+  transition: transform 0.4s ease; /* Smooth zoom transition */
+}
+
+.zoom-container img:hover {
+  transform: scale(1.2); /* Zoom in effect */
+}
+
+/* Container for zoom effect */
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image that will be zoomed */
+.zoom-container img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.drift-inline {
+  z-index: 10;
+}

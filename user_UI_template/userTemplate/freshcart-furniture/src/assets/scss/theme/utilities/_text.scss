@@ -1,0 +1,38 @@
+// Text
+
+.text-inherit {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-facebook {
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $facebook;
+  }
+}
+
+.text-instagram {
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $instagram;
+  }
+}
+
+.text-linkedin {
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $linkedin;
+  }
+}
+.text-youtube {
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $youtube;
+  }
+}

@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @@include("../../partials/head-links.html")
+
+    <title>Imask - eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+    <!--Main wrapper start-->
+    <main class="docs-main-wrapper">
+        @@include("../../partials/docs-navbar.html")
+        <!-- left sidebar -->
+        @@include("../../partials/docs-sidenav.html")
+        <!--Wrapper start-->
+        <div class="docs-wrapper">
+            <div class="docs-content">
+                <!-- Content -->
+                <div class="container">
+                    <div class="row mb-lg-7 mb-5">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="mb-5" id="intro">
+                                <h1>Imask</h1>
+                                <p class="mb-0">vanilla javascript input mask</p>
+                            </div>
+                            <div class="alert alert-info gap-3">
+                                <div class="d-flex gap-3 lh-1 mb-3">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16">
+                                            </path>
+                                            <path
+                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <p class="mb-0">
+                                        Requires CSS and JS. (Note: if you are using our dist folder then will get libs
+                                        folder in it.)
+                                    </p>
+                                </div>
+                                <div class="ms-5">
+
+                                    <div class="my-2 fw-semibold">
+
+                                        assets/libs/imask/dist/imask.min.js<br>
+                                        assets/js/vendors/inputmask.js
+
+                                    </div>
+
+                                    <div class="mt-4">
+                                        Note that this component requires the use of the third-party
+                                        <a href="https://imask.js.org/" class="alert-link" target="_blank">Imask</a>
+                                        plugin.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- imask -->
+                    <div class="border rounded mb-lg-7 mb-5">
+                        <div class="row align-items-center py-2 px-3">
+                            <div class="col-lg-8 col-xl-9 col-7">
+                                <div>
+                                    <h2 class="text-truncate h5 mb-0">Basic examples </h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xl-3 col-5 d-flex justify-content-end">
+                                <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-imask-preview-tab" data-bs-toggle="pill"
+                                            href="#pills-imask-preview" role="tab" aria-controls="pills-imask-preview"
+                                            aria-selected="true">
+                                            <span class="lh-1"><i class="bi bi-eye"></i></span>
+                                            <span class="ms-2 d-none d-lg-block">Preview</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-imask-code-tab" data-bs-toggle="pill"
+                                            href="#pills-imask-code" role="tab" aria-controls="pills-imask-code"
+                                            aria-selected="false">
+                                            <span class="lh-1"><i class="bi bi-code"></i></span>
+                                            <span class="ms-2 d-none d-lg-block">Code</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tab-content border-top p-3" id="pills-tabTwoContent">
+                                    <div class="tab-pane tab-example-preview fade show active" id="pills-imask-preview"
+                                        role="tabpanel" aria-labelledby="pills-imask-preview-tab">
+                                        <!-- Form -->
+                                        <form class="form">
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    RegExp (Russian postal code)
+                                                    <span class="desc">/^[1-6]\d{0,5}$/</span>
+                                                </label>
+                                                <input class="form-control" id="regexp-mask" type="text" value="" />
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    Pattern (Phone)
+                                                    <span class="desc">+{7}(000)000-00-00</span>
+                                                </label>
+                                                <input class="form-control" id="phone-mask" type="text" value="" />
+                                                <div class="unmasked-value desc">
+                                                    unmasked:
+                                                    <span id="phone-unmasked"></span>
+                                                    <span id="phone-complete" class="example__complete"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    Pattern (Secure)
+                                                    <span class="desc">XXX-XX-0000</span>
+                                                </label>
+                                                <input class="form-control" id="ssn-mask" type="text" value="" />
+                                                <div class="unmasked-value desc">
+                                                    value:
+                                                    <span id="ssn-value"></span>
+                                                    <span id="ssn-complete" class="example__complete"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    Number
+                                                    <span class="desc">in range [-10000, 10000]</span>
+                                                </label>
+                                                <input class="form-control" id="number-mask" type="text" value="" />
+                                                <div class="unmasked-value desc">
+                                                    number:
+                                                    <span id="number-value"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    Date
+                                                    <span class="desc">'dd.mm.yyyy' in range [01.01.1990,
+                                                        01.01.2020]</span>
+                                                </label>
+                                                <input class="form-control" id="date-mask" type="text" value="" />
+                                                <div class="unmasked-value desc">
+                                                    date:
+                                                    <span id="date-value"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    On-the-fly select
+                                                    <span class="desc">phone or email</span>
+                                                </label>
+                                                <input class="form-control" id="dynamic-mask" type="text" />
+                                                <div class="unmasked-value desc">
+                                                    unmasked:
+                                                    <span id="dynamic-value"></span>
+                                                    <span id="dynamic-complete" class="example__complete"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    Mask in mask
+                                                    <span class="desc">currency input</span>
+                                                </label>
+                                                <input class="form-control" id="currency-mask" type="text" />
+                                                <div class="unmasked-value desc">
+                                                    unmasked:
+                                                    <span id="currency-value"></span>
+                                                    <span id="currency-complete" class="example__complete"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    Pipe
+                                                    <span class="desc">unmasked → masked</span>
+                                                </label>
+                                                <input class="form-control" id="pipe-mask" type="text" />
+                                                <div class="unmasked-value desc">
+                                                    masked:
+                                                    <span id="pipe-value"></span>
+                                                    <span id="pipe-complete" class="example__complete"></span>
+                                                </div>
+                                            </div>
+                                            <!-- Card number -->
+                                            <div class="mb-3">
+                                                <label class="form-label" for="card-mask">Card Number</label>
+                                                <input class="form-control" id="card-mask" type="text" value="" />
+                                            </div>
+                                            <!-- CVV -->
+                                            <div class="mb-3">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="digit-mask">
+                                                        CVV Code
+                                                        <i class="fe fe-help-circle ms-1" data-bs-toggle="tooltip"
+                                                            data-placement="top"
+                                                            title="A 3 - digit number, typically printed on the back of a card."></i>
+                                                    </label>
+                                                    <input class="form-control" id="digit-mask" type="text" value="" />
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="tab-pane tab-example-code fade" id="pills-imask-code" role="tabpanel"
+                                        aria-labelledby="pills-imask-code-tab">
+                                        <pre class="language-markup" tabindex="0"><code class="language-markup"> <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>form</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>RegExp (Russian
+                                                postal code) <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>/^[1-6]\d{0,5}$/<span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>regexp-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">value</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span><span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>Pattern (Phone)
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>+{7}(000)000-00-00<span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>phone-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">value</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span><span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>unmasked: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>phone-unmasked<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>phone-complete<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>example__complete<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>Pattern (Secure)
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>XXX-XX-0000<span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>ssn-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">value</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span><span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>value: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>ssn-value<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>ssn-complete<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>example__complete<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>Number <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>in range [-10000,
+                                                10000]<span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>number-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">value</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span><span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>number: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>number-value<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>Date <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>'dd.mm.yyyy' in
+                                                range [01.01.1990, 01.01.2020]<span class="token tag"><span
+                                                        class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>date-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">value</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span><span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>date: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>date-value<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>On-the-fly select
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>phone or email<span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>dynamic-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>unmasked: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>dynamic-value<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>dynamic-complete<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>example__complete<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>Mask in mask <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>currency input<span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>currency-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>unmasked: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>currency-value<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>currency-complete<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>example__complete<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>label</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-label<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>Pipe <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>unmasked →
+                                                masked<span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>label</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>input</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>form-control<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>pipe-mask<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">type</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>text<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>unmasked-value desc<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>masked: <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>pipe-value<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>pipe-complete<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>example__complete<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>form</span><span
+                                                        class="token punctuation">&gt;</span></span></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  imask  -->
+
+                </div>
+            </div>
+            @@include("../../partials/docs-footer.html")
+        </div>
+        <!--Wrapper end-->
+    </main>
+    <!--Main wrapper end-->
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+    <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/sidebar-menu.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/search.js"></script>
+    <script src="@@webRoot/node_modules/imask/dist/imask.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/inputmask.js"></script>
+
+</body>
+
+</html>

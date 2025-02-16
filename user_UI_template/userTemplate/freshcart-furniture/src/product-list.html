@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="@@webRoot/node_modules/nouislider/dist/nouislider.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="@@webRoot/node_modules/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="@@webRoot/node_modules/drift-zoom/dist/drift-basic.min.css" />
+
+	@@include("partials/head-links.html")
+
+	<title>Product List eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+	@@include("partials/top-bar.html") @@include("partials/navbar.html")
+	<!--Pageheader start-->
+	<section class="bg-light d-flex flex-column align-items-center justify-content-center" style="
+				background:
+					linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.22)),
+					url(./assets/images/jpg/page-header-img.jpg) no-repeat;
+				background-position: center;
+				background-size: cover;
+			">
+		<div class="container">
+			<div class="row align-items-center py-6">
+				<div class="col-lg-6">
+
+					<div class="position-relative z-1">
+						<h1 class="mb-4 text-white">Office</h1>
+						<p class="lead text-white">As everyone heads back to work, whether that be into the office or
+							the classroom, having an organized desk space is essential.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w-lg-50 w-100 position-absolute end-0 top-0 object-fit-cover"></div>
+	</section>
+	<!--Pageheader end-->
+	<!--Breadcrumb start-->
+	<div class="container">
+		<div class="row">
+			<div class="col-12 py-2">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb mb-0 fw-medium">
+						<li class="breadcrumb-item"><a href="#!">Shop</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Office</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!--Breadcrumb end-->
+	<!--Filter button start-->
+	<div class="position-fixed bottom-0 start-50 translate-middle d-block d-lg-none z-1">
+		<a class="btn btn-dark d-flex align-items-center gap-2" data-bs-toggle="offcanvas" href="#offcanvasCategory"
+			role="button" aria-controls="offcanvasCategory">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders2"
+				viewBox="0 0 16 16">
+				<path fill-rule="evenodd"
+					d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5M12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5M1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8m9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5m1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+			</svg>
+			<span>Filter</span>
+		</a>
+	</div>
+	<!--Filter button end-->
+	<!--Product list start-->
+	<section class="py-md-6 pb-6">
+		<div class="container">
+			<div class="row">
+				<!--Filter-->
+				<aside class="col-lg-3 col-md-4 mb-6 mb-md-0">
+					<div class="offcanvas offcanvas-start offcanvas-collapse w-md-50 border-end-0" tabindex="-1"
+						id="offcanvasCategory" aria-labelledby="offcanvasCategoryLabel">
+						<div class="offcanvas-header d-lg-none">
+							<h5 class="offcanvas-title" id="offcanvasCategoryLabel">Filter</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+								aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body ps-lg-2 pt-lg-0">
+
+							<div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-3">
+								<!--In stock only-->
+								<div>
+									<h5 class="mb-0 fs-6">In stock only</h5>
+								</div>
+								<div class="form-check form-switch">
+									<input class="form-check-input" type="checkbox" role="switch"
+										id="flexSwitchCheckChecked" checked />
+									<label class="form-check-label" for="flexSwitchCheckChecked"></label>
+								</div>
+							</div>
+							<!--Color-->
+							<div class="mb-3 border-bottom pb-3">
+								<a class="d-flex align-items-center justify-content-between" data-bs-toggle="collapse"
+									href="#collapseColor" role="button" aria-expanded="true"
+									aria-controls="collapseColor">
+									<h5 class="mb-0 fs-6">Color</h5>
+									<i class="bi bi-chevron-down chevron-down"></i>
+								</a>
+								<div class="collapse show" id="collapseColor">
+									<div class="mt-3 ps-1" style="height: 180px" data-simplebar>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterBlack"
+												checked />
+											<label class="form-check-label" for="filterBlack">Black</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterBrown" />
+											<label class="form-check-label" for="filterBrown">Brown</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterGreen" />
+											<label class="form-check-label" for="filterGreen">Green</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value=""
+												id="filterYellow" />
+											<label class="form-check-label" for="filterYellow">Yellow</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterRed" />
+											<label class="form-check-label" for="filterRed">Red</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterPink" />
+											<label class="form-check-label" for="filterPink">Pink</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterCyan" />
+											<label class="form-check-label" for="filterCyan">Cyan</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterBlue" />
+											<label class="form-check-label" for="filterBlue">Blue</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="filterGray" />
+											<label class="form-check-label" for="filterGray">Gray</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Brand-->
+							<div class="mb-3 border-bottom pb-3">
+								<a class="d-flex align-items-center justify-content-between" data-bs-toggle="collapse"
+									href="#collapseBrand" role="button" aria-expanded="true"
+									aria-controls="collapseBrand">
+									<h5 class="mb-0 fs-6">Brand</h5>
+									<i class="bi bi-chevron-down chevron-down"></i>
+								</a>
+								<div class="collapse show" id="collapseBrand">
+									<div class="mt-3">
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Brand1"
+												checked />
+											<label class="form-check-label" for="Brand1">Brand-1</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Brand2" />
+											<label class="form-check-label" for="Brand2">Brand-2</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Brand3" />
+											<label class="form-check-label" for="Brand3">Brand-3</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Brand4" />
+											<label class="form-check-label" for="Brand4">Brand-4</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Brand-->
+							<!--Product type-->
+							<div class="mb-3 border-bottom pb-3">
+								<a class="d-flex align-items-center justify-content-between" data-bs-toggle="collapse"
+									href="#collapseProductType" role="button" aria-expanded="true"
+									aria-controls="collapseProductType">
+									<h5 class="mb-0 fs-6">Product Type</h5>
+									<i class="bi bi-chevron-down chevron-down"></i>
+								</a>
+								<div class="collapse show" id="collapseProductType">
+									<div class="mt-3">
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Kitchen"
+												checked />
+											<label class="form-check-label" for="Kitchen">Kitchen</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Decoration" />
+											<label class="form-check-label" for="Decoration">Decoration</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Lighting" />
+											<label class="form-check-label" for="Lighting">Lighting</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Office" />
+											<label class="form-check-label" for="Office">Office</label>
+										</div>
+										<!-- form check -->
+										<div class="form-check mb-2">
+											<!-- input -->
+											<input class="form-check-input" type="checkbox" value="" id="Chair" />
+											<label class="form-check-label" for="Chair">Chair</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Price-->
+							<div class="mb-3 border-bottom pb-3">
+								<a class="d-flex align-items-center justify-content-between" data-bs-toggle="collapse"
+									href="#collapsePrice" role="button" aria-expanded="true"
+									aria-controls="collapsePrice">
+									<h5 class="mb-0 fs-6">Price</h5>
+									<i class="bi bi-chevron-down chevron-down"></i>
+								</a>
+								<div class="collapse show" id="collapsePrice">
+									<div class="mt-3">
+										<!-- range -->
+										<div id="priceRange" class="mb-3"></div>
+										<!-- <small class="text-muted">Price:</small> -->
+										<span id="priceRange-value" class="small d-flex justify-content-between"></span>
+									</div>
+								</div>
+							</div>
+							<!--Rating-->
+							<div class="mb-3 border-bottom pb-3">
+								<a class="d-flex align-items-center justify-content-between" data-bs-toggle="collapse"
+									href="#collapseRating" role="button" aria-expanded="true"
+									aria-controls="collapseRating">
+									<h5 class="mb-0 fs-6">Rating</h5>
+									<i class="bi bi-chevron-down chevron-down"></i>
+								</a>
+								<div class="collapse show" id="collapseRating">
+									<div class="mt-3">
+										<div>
+											<!-- form check -->
+											<div class="form-check mb-2">
+												<!-- input -->
+												<input class="form-check-input" type="checkbox" value=""
+													id="ratingFive" />
+												<label class="form-check-label" for="ratingFive">
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+												</label>
+											</div>
+											<!-- form check -->
+											<div class="form-check mb-2">
+												<!-- input -->
+												<input class="form-check-input" type="checkbox" value="" id="ratingFour"
+													checked />
+												<label class="form-check-label" for="ratingFour">
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+												</label>
+											</div>
+											<!-- form check -->
+											<div class="form-check mb-2">
+												<!-- input -->
+												<input class="form-check-input" type="checkbox" value=""
+													id="ratingThree" />
+												<label class="form-check-label" for="ratingThree">
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+												</label>
+											</div>
+											<!-- form check -->
+											<div class="form-check mb-2">
+												<!-- input -->
+												<input class="form-check-input" type="checkbox" value=""
+													id="ratingTwo" />
+												<label class="form-check-label" for="ratingTwo">
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+												</label>
+											</div>
+											<!-- form check -->
+											<div class="form-check mb-2">
+												<!-- input -->
+												<input class="form-check-input" type="checkbox" value=""
+													id="ratingOne" />
+												<label class="form-check-label" for="ratingOne">
+													<i class="bi bi-star-fill text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+													<i class="bi bi-star text-warning"></i>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-12">
+							<!--Selected filter-->
+							<div class="mb-4 d-flex flex-column flex-lg-row flex-row justify-content-between gap-4">
+								<div class="d-flex gap-2 flex-wrap align-items-center">
+									<button type="button" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+										In Stock
+										<i class="bi bi-x lh-1"></i>
+									</button>
+									<button type="button" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+										Black
+										<i class="bi bi-x lh-1"></i>
+									</button>
+									<button type="button" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+										Brand
+										<i class="bi bi-x lh-1"></i>
+									</button>
+									<button type="button" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+										Kitchen
+										<i class="bi bi-x lh-1"></i>
+									</button>
+									<button type="button" class="btn btn-sm btn-light d-flex align-items-center gap-2">
+										$10 - $259
+										<i class="bi bi-x lh-1"></i>
+									</button>
+									<button type="button" class="btn btn-sm btn-focus-none">Clear all</button>
+								</div>
+								<div class="col-sm-4 col-xxl-3">
+									<select data-choices data-choices-removeitembutton="true"
+										data-choices-classname="form-select" aria-label="Default select example">
+										<option value="">Sort by: Featured</option>
+										<option value="Best selling">Best selling</option>
+										<option value="Alphabetically, A-Z">Alphabetically, A-Z</option>
+										<option value="Alphabetically, Z-A">Alphabetically, Z-A</option>
+										<option value="Price, low to high">Price, low to high</option>
+										<option value="Price, high to low">Price, high to low</option>
+										<option value="Date, old to new">Date, old to new</option>
+										<option value="Date, new to old">Date, new to old</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<!--Product-->
+						<div class="col-12 mb-6">
+							<div class="product-card d-flex flex-column flex-md-row align-items-center gap-4 gap-md-0">
+								<div class="text-center product-card-img col-lg-4 col-md-5">
+									<a href="#!">
+										<img src="./assets/images/product/product-img-1.jpg" alt="product image"
+											class="img-fluid" />
+										<img src="./assets/images/product/product-img-hover-1.jpg" alt="product image"
+											class="img-fluid product-img-hover" />
+									</a>
+								</div>
+								<div class="col-lg-8 col-md-7 ps-md-6">
+									<div class="d-flex justify-content-between mb-4">
+										<div class="d-flex flex-column">
+											<span class="small fw-medium text-uppercase">BRAND</span>
+											<span class="">
+												4.3
+												<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+													fill="currentColor"
+													class="bi bi-star-fill align-baseline text-warning"
+													viewBox="0 0 16 16">
+													<path
+														d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+												</svg>
+											</span>
+										</div>
+										<div>
+											<button type="button"
+												class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-heart animate-target"
+													viewBox="0 0 16 16">
+													<path
+														d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="mb-3">
+										<h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate">
+											<a href="#!">Sofa with wood legs</a>
+										</h3>
+										<p class="mb-0 lh-1 text-dark fw-semibold">$34.00</p>
+									</div>
+									<div class="mb-4">
+										<p>Lorem ipsum dolor, sit amet consectetur adipisicing eliteos.Facere molestiae
+											architecto et officia sequi.</p>
+										<div role="group" aria-label="Basic radio toggle button group">
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio1" />
+											<label class="btn-color-swatch bg-primary" for="btnradio1"></label>
+
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio2" />
+											<label class="btn-color-swatch bg-success" for="btnradio2"></label>
+
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio3"
+												checked />
+											<label class="btn-color-swatch bg-danger" for="btnradio3"></label>
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio4" />
+											<label class="btn-color-swatch bg-info" for="btnradio4"></label>
+										</div>
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<button type="button" class="btn btn-primary product-card-btn quick-add-btn"
+											data-product-name="Sofa with wood legs" data-product-price="34.00"
+											data-product-img="./assets/images/product/product-img-1.jpg">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+												<path
+													d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+											</svg>
+											Add to Cart
+										</button>
+
+										<a href="#!" class="text-link" data-bs-toggle="modal"
+											data-bs-target="#quickViewModal">
+											Quick view
+
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Product-->
+						<div class="col-12 mb-6">
+							<div class="product-card d-flex flex-column flex-md-row align-items-center gap-4 gap-md-0">
+								<div class="text-center product-card-img col-lg-4 col-md-5">
+									<a href="#!">
+										<img src="./assets/images/product/product-img-2.jpg" alt="product image"
+											class="img-fluid" />
+										<img src="./assets/images/product/product-img-hover-2.jpg" alt="product image"
+											class="img-fluid product-img-hover" />
+									</a>
+								</div>
+								<div class="col-lg-8 col-md-7 ps-md-6">
+									<div class="d-flex justify-content-between mb-4">
+										<div class="d-flex flex-column">
+											<span class="small fw-medium text-uppercase">BRAND</span>
+											<span class="">
+												4.0
+												<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+													fill="currentColor"
+													class="bi bi-star-fill align-baseline text-warning"
+													viewBox="0 0 16 16">
+													<path
+														d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+												</svg>
+											</span>
+										</div>
+										<div>
+											<button type="button"
+												class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-heart animate-target"
+													viewBox="0 0 16 16">
+													<path
+														d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="mb-3">
+										<h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate"><a
+												href="#!">Floor Lamp</a>
+										</h3>
+										<p class="mb-0 lh-1 text-dark fw-semibold">$95.00</p>
+									</div>
+									<div class="mb-4">
+										<p>Blanditiis laborum quaerat obcaecati saepe earum ad porro sed at minima.
+											Repellat nam sunt aut dolor doloremque magnam excepturi.</p>
+										<div role="group" aria-label="Basic radio toggle button group">
+											<input type="radio" class="btn-check" name="btnradio1" id="btnradio5"
+												checked />
+											<label class="btn-color-swatch bg-primary" for="btnradio5"></label>
+
+											<input type="radio" class="btn-check" name="btnradio1" id="btnradio6" />
+											<label class="btn-color-swatch bg-success" for="btnradio6"></label>
+										</div>
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<button type="button" class="btn btn-primary product-card-btn quick-add-btn"
+											data-product-name="Sofa with wood legs" data-product-price="34.00"
+											data-product-img="./assets/images/product/product-img-2.jpg">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+												<path
+													d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+											</svg>
+											Add to Cart
+										</button>
+										<a href="#!" class="text-link" data-bs-toggle="modal"
+											data-bs-target="#quickViewModal">
+											Quick view
+
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Product-->
+						<div class="col-12 mb-6">
+							<div class="product-card d-flex flex-column flex-md-row align-items-center gap-4 gap-md-0">
+								<div class="text-center product-card-img col-lg-4 col-md-5">
+									<a href="#!"><img src="./assets/images/product/product-img-3.jpg"
+											alt="product image" class="img-fluid" />
+										<img src="./assets/images/product/product-img-hover-3.jpg" alt="product image"
+											class="img-fluid product-img-hover" /></a>
+									<div class="position-absolute top-0 p-2 px-3">
+										<span class="badge bg-info">New</span>
+									</div>
+								</div>
+								<div class="col-lg-8 col-md-7 ps-md-6">
+									<div class="d-flex justify-content-between mb-4">
+										<div class="d-flex flex-column">
+											<span class="small fw-medium text-uppercase">BRAND</span>
+											<span class="">
+												4.4
+												<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+													fill="currentColor"
+													class="bi bi-star-fill align-baseline text-warning"
+													viewBox="0 0 16 16">
+													<path
+														d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+												</svg>
+											</span>
+										</div>
+										<div>
+											<button type="button"
+												class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-heart animate-target"
+													viewBox="0 0 16 16">
+													<path
+														d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="mb-3">
+										<h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate"><a
+												href="#!">Comfort Seat
+												Chair</a></h3>
+										<p class="mb-0 lh-1 text-dark fw-semibold">$78.00</p>
+									</div>
+									<div class="mb-4">
+										<p>Dolor sit amet consectetur adipisicing elit. Similique nulla, eum delectus
+											facere doloremque inventore enim tempora odit impedit quos!</p>
+										<div role="group" aria-label="Basic radio toggle button group">
+											<input type="radio" class="btn-check" name="btnradio2" id="btnradio7"
+												checked />
+											<label class="btn-color-swatch bg-primary" for="btnradio7"></label>
+										</div>
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<button type="button" class="btn btn-primary product-card-btn quick-add-btn"
+											data-product-name="Sofa with wood legs" data-product-price="34.00"
+											data-product-img="./assets/images/product/product-img-3.jpg">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+												<path
+													d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+											</svg>
+											Add to Cart
+										</button>
+										<a href="#!" class="text-link" data-bs-toggle="modal"
+											data-bs-target="#quickViewModal">
+											Quick view
+
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Product-->
+						<div class="col-12">
+							<div class="product-card d-flex flex-column flex-md-row align-items-center gap-4 gap-md-0">
+								<div class="text-center product-card-img col-lg-4 col-md-5">
+									<a href="#!"><img src="./assets/images/product/product-img-4.jpg"
+											alt="product image" class="img-fluid" />
+										<img src="./assets/images/product/product-img-hover-4.jpg" alt="product image"
+											class="img-fluid product-img-hover" /></a>
+								</div>
+								<div class="col-lg-8 col-md-7 ps-md-6">
+									<div class="d-flex justify-content-between mb-4">
+										<div class="d-flex flex-column">
+											<span class="small fw-medium text-uppercase">BRAND</span>
+											<span class="">
+												4.2
+												<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+													fill="currentColor"
+													class="bi bi-star-fill align-baseline text-warning"
+													viewBox="0 0 16 16">
+													<path
+														d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+												</svg>
+											</span>
+										</div>
+										<div>
+											<button type="button"
+												class="btn btn-light bg-transparent border-0 p-0 animate-pulse">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+													fill="currentColor" class="bi bi-heart animate-target"
+													viewBox="0 0 16 16">
+													<path
+														d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="mb-3">
+										<h3 class="fs-6 mb-0 product-heading d-inline-block text-truncate"><a
+												href="#!">Armchair</a></h3>
+										<p class="mb-0 lh-1 text-dark fw-semibold">
+											<span class="text-danger">$75.00</span>
+											<span class="text-decoration-line-through">$95.00</span>
+										</p>
+									</div>
+									<div class="mb-4">
+										<p>Harum cupiditate? Vero suscipit voluptatum quia dolorem, voluptatem quasi
+											similique dignissimos delectus.</p>
+										<div role="group" aria-label="Basic radio toggle button group">
+											<input type="radio" class="btn-check" name="btnradio3" id="btnradio8"
+												checked />
+											<label class="btn-color-swatch bg-primary" for="btnradio8"></label>
+
+											<input type="radio" class="btn-check" name="btnradio3" id="btnradio9" />
+											<label class="btn-color-swatch bg-success" for="btnradio9"></label>
+
+											<input type="radio" class="btn-check" name="btnradio3" id="btnradio10" />
+											<label class="btn-color-swatch bg-info" for="btnradio10"></label>
+										</div>
+									</div>
+
+									<div class="d-flex align-items-center gap-4">
+										<button type="button" class="btn btn-primary product-card-btn quick-add-btn"
+											data-product-name="Sofa with wood legs" data-product-price="34.00"
+											data-product-img="./assets/images/product/product-img-4.jpg">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+												<path
+													d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+											</svg>
+											Add to Cart
+										</button>
+										<a href="#!" class="text-link" data-bs-toggle="modal"
+											data-bs-target="#quickViewModal">
+											Quick view
+
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Pagination-->
+						<div class="col-12 mt-8">
+							<nav aria-label="Page navigation example">
+								<ul class="pagination">
+									<li class="page-item"><a class="page-link disabled" href="#!">Previous</a></li>
+									<li class="page-item"><a class="page-link active" href="#!">1</a></li>
+									<li class="page-item"><a class="page-link" href="#!">2</a></li>
+									<li class="page-item"><a class="page-link" href="#!">...</a></li>
+									<li class="page-item"><a class="page-link" href="#!">6</a></li>
+									<li class="page-item"><a class="page-link" href="#!">Next</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Product list end-->
+
+	@@include("partials/footer.html") @@include("partials/btn-scroll-top.html")@@include("partials/addtocart.html")
+	@@include("partials/quickview.html")
+
+	<!-- Javascript-->
+	<script src="@@webRoot/node_modules/nouislider/dist/nouislider.min.js"></script>
+	<script src="@@webRoot/node_modules/wnumb/wNumb.min.js"></script>
+	@@include("partials/scripts.html")
+
+	<script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+	<script src="@@webRoot/assets/js/vendors/choice.js"></script>
+
+	<script src="@@webRoot/assets/js/vendors/flag.js"></script>
+
+	<script src="@@webRoot/assets/js/vendors/add-to-cart.js"></script>
+	<script src="@@webRoot/assets/js/vendors/qty-input.js"></script>
+	<script src="@@webRoot/assets/js/vendors/btn-scrolltop.js"></script>
+	<script src="@@webRoot/node_modules/swiper/swiper-bundle.min.js"></script>
+	<script src="@@webRoot/assets/js/vendors/swiper.js"></script>
+
+	<script src="@@webRoot/node_modules/drift-zoom/dist/Drift.min.js"></script>
+	<script src="@@webRoot/assets/js/vendors/drift.js"></script>
+</body>
+
+</html>

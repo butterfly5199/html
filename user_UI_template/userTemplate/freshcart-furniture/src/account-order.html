@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="@@webRoot/node_modules/swiper/swiper-bundle.min.css" />
+  @@include("partials/head-links.html")
+
+  <title>Account Order History eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+  @@include("partials/top-bar.html") @@include("partials/navbar.html")
+  <section class="py-lg-8 py-5">
+    <div class="container">
+      <div class="row">
+        <!--Account sidebar start-->
+        <div class="col-lg-3 col-md-4">
+
+          @@include("partials/navbar-account.html")
+        </div>
+        <!--Account sidebar end-->
+        <!--Orders start-->
+        <div class="col-lg-9 col-md-8">
+          <div class="row g-3 mb-4">
+            <div class="col-lg-6">
+              <!--Heading-->
+              <h1 class="mb-0 h2">Orders</h1>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <select data-choices-innertext data-choices-innertext-removeitembutton="true"
+                data-choices-classname="form-select" aria-label="Default select example">
+                <!-- <option value="">Select status</option> -->
+                <option value="In progress" data-color="bg-info">In progress</option>
+                <option value="Canceled" data-color="bg-primary">Canceled</option>
+                <option value="Delivered" data-color="bg-success">Delivered</option>
+                <option value="Delayed" data-color="bg-warning">Delayed</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <select data-choices data-choices-removeitembutton="true" data-choices-classname="form-select">
+                <option value="all-time">For all time</option>
+                <option value="last-year">For last year</option>
+                <option value="last-3-months">For last 3 months</option>
+                <option value="last-30-days">For last 30 days</option>
+                <option value="last-week">For last week</option>
+              </select>
+            </div>
+
+
+          </div>
+          <!--Order-->
+          <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between px-3 py-3">
+              <span class="text-dark fw-semibold">Order ID: 78A6543D210</span>
+              <span class="badge text-bg-info">In progress</span>
+
+            </div>
+            <div class="card-body px-3 py-3">
+              <div class="row gy-4">
+                <div class="col-lg-5">
+                  <div class="d-flex gap-2">
+                    <img src="./assets/images/product/product-img-1.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-2.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-3.jpg" alt="" class="icon-shape icon-xl">
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="row align-items-center gy-3">
+                    <div class="col-lg-5">
+                      <div class="d-flex flex-column">
+                        <span>Estimated Arrival</span>
+                        <span class="text-dark fw-medium">Feb 6, 2025</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex flex-column">
+                        <span>Order value</span>
+                        <span class="text-dark fw-medium">$69.00</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="d-flex flex-column">
+
+                        <a class="text-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                          aria-controls="offcanvasRight">View Details</a>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+          <!--Order-->
+          <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between px-3 py-3">
+              <span class="text-dark fw-semibold">Order ID: 56H78G90F12</span>
+              <span class="badge text-bg-success">Delivered</span>
+
+            </div>
+            <div class="card-body px-3 py-3">
+              <div class="row gy-4">
+                <div class="col-lg-5">
+                  <div class="d-flex gap-2">
+                    <img src="./assets/images/product/product-img-4.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-5.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-6.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-7.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-8.jpg" alt="" class="icon-shape icon-xl">
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="row align-items-center gy-3">
+                    <div class="col-lg-5">
+                      <div class="d-flex flex-column">
+                        <span>Estimated Arrival</span>
+                        <span class="text-dark fw-medium">Des 12, 2024</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex flex-column">
+                        <span>Order value</span>
+                        <span class="text-dark fw-medium">$369.00</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="d-flex flex-column">
+                        <a class="text-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                          aria-controls="offcanvasRight">View Details</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+          <!--Order-->
+          <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between px-3 py-3">
+              <span class="text-dark fw-semibold">Order ID: 45C6789D123</span>
+              <span class="badge text-bg-danger">Canceled</span>
+
+            </div>
+            <div class="card-body px-3 py-3">
+              <div class="row gy-4">
+                <div class="col-lg-5">
+                  <div class="d-flex gap-2">
+                    <img src="./assets/images/product/product-img-9.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-10.jpg" alt="" class="icon-shape icon-xl">
+
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="row align-items-center gy-3">
+                    <div class="col-lg-5">
+                      <div class="d-flex flex-column">
+                        <span>Estimated Arrival</span>
+                        <span class="text-dark fw-medium">Feb 6, 2025</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex flex-column">
+                        <span>Order value</span>
+                        <span class="text-dark fw-medium">$69.00</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="d-flex flex-column">
+                        <a class="text-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                          aria-controls="offcanvasRight">View Details</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+          <!--Order-->
+          <div class="card mb-5">
+            <div class="card-header d-flex justify-content-between px-3 py-3">
+              <span class="text-dark fw-semibold">Order ID: 12H34G56F78</span>
+              <span class="badge text-bg-success">Delivered</span>
+
+            </div>
+            <div class="card-body px-3 py-3">
+              <div class="row gy-4">
+                <div class="col-lg-5">
+                  <div class="d-flex gap-2">
+                    <img src="./assets/images/product/product-img-2.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-3.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-4.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-5.jpg" alt="" class="icon-shape icon-xl">
+                    <img src="./assets/images/product/product-img-6.jpg" alt="" class="icon-shape icon-xl">
+
+
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="row align-items-center gy-3">
+                    <div class="col-lg-5">
+                      <div class="d-flex flex-column">
+                        <span>Estimated Arrival</span>
+                        <span class="text-dark fw-medium">Des 12, 2024</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex flex-column">
+                        <span>Order value</span>
+                        <span class="text-dark fw-medium">$369.00</span>
+
+                      </div>
+
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="d-flex flex-column">
+                        <a class="text-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                          aria-controls="offcanvasRight">View Details</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+          <div>
+            <!--Pagination-->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#!" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link active" href="#!">1</a></li>
+                <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#!" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+
+        </div>
+        <!--Orders end-->
+      </div>
+
+    </div>
+  </section>
+  <!--offcanvas-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+    style="width: 546px;">
+    <div class="offcanvas-header align-items-start">
+
+      <div class="d-flex flex-column gap-2">
+
+        <h4 class="offcanvas-title mb-0" id="offcanvasRightLabel">Order # 78A6543D210
+        </h4>
+        <div>
+          <span class="badge text-bg-info">In progress</span>
+        </div>
+
+      </div>
+      <button type="button" class="btn-close mt-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+
+
+
+
+    </div>
+    <hr class="mx-3">
+    <div class="offcanvas-body d-flex flex-column gap-6">
+      <div class="text-center d-flex flex-column gap-4 ">
+        <span class="mb-0 fw-medium text-dark">Be patient, package on deliver!</span>
+        <div class="progress rounded-pill" role="progressbar" aria-label="Success example" aria-valuenow="25"
+          aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+          <div class="progress-bar bg-success" style="width: 70%"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="d-flex mb-3 align-items-start cart-item gap-4 " data-product-price="34">
+          <img src="./assets/images/product/product-img-2.jpg" alt="Sofa with wood legs" class="icon-shape icon-xxl">
+
+          <div class="me-auto d-flex flex-column gap-2">
+            <div class="d-flex flex-column gap-1">
+              <h6 class="mb-0">Stylish Wooden Table Lamp</h6>
+              <p class="mb-0 lh-1 text-dark fw-semibold">$69.00</p>
+            </div>
+            <small class="text-dark fw-medium">Qty: 1</small>
+
+          </div>
+
+        </div>
+        <div class="d-flex mb-3 align-items-start cart-item gap-4 " data-product-price="34">
+          <img src="./assets/images/product/product-img-8.jpg" alt="Sofa with wood legs" class="icon-shape icon-xxl">
+
+          <div class="me-auto d-flex flex-column gap-2">
+            <div class="d-flex flex-column gap-1">
+              <h6 class="mb-0">Succulent Plant Pot</h6>
+              <p class="mb-0 lh-1 text-dark fw-semibold">
+                <span class="text-danger">$14.00</span>
+                <span class="text-decoration-line-through">$15.00</span>
+            </div>
+
+            <small class="text-dark fw-medium">Qty: 1</small>
+
+          </div>
+
+        </div>
+        <div class="d-flex mb-3 align-items-start cart-item gap-4 " data-product-price="34">
+          <img src="./assets/images/product/product-img-6.jpg" alt="Sofa with wood legs" class="icon-shape icon-xxl">
+
+          <div class="me-auto d-flex flex-column gap-2">
+            <div class="d-flex flex-column gap-1">
+              <h6 class="mb-0">Design wall clock</h6>
+              <p class="mb-0 lh-1 text-dark fw-semibold">$69.00</p>
+            </div>
+            <small class="text-dark fw-medium">Qty: 1</small>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="d-flex flex-column gap-4">
+        <div class="card">
+          <div class="card-header bg-white py-3">
+
+            <div class="d-flex flex-row align-items-center gap-2">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-truck text-primary" viewBox="0 0 16 16">
+                  <path
+                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                </svg>
+              </div>
+              <span class="text-dark fw-medium">Delivery</span>
+              <span>In 5 days</span>
+            </div>
+
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+              <li>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <span>Estimated delivery date:</span>
+                  <span class="text-dark fw-medium">Feb 8, 2025 / 10:00 - 12:00</span>
+                </div>
+              </li>
+              <li>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <span>Shipping method:</span>
+                  <span class="text-dark fw-medium">Courier delivery</span>
+                </div>
+              </li>
+              <li>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <span>Shipping address:</span>
+                  <span class="text-dark fw-medium">567 Cherry Lane Apt B12, Harrisburg</span>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+          <div class="card-header bg-white py-3">
+
+            <div class="d-flex flex-row align-items-center gap-2">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-credit-card text-primary" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                </svg>
+              </div>
+              <span class="text-dark fw-medium">Payment</span>
+
+            </div>
+
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+              <li>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <span>Payment method:</span>
+                  <span class="text-dark fw-medium">Cash on delivery</span>
+                </div>
+              </li>
+              <li>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <span>Tax collected:</span>
+                  <span class="text-dark fw-medium">$12.40</span>
+                </div>
+              </li>
+              <li>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <span>Shipping:</span>
+                  <span class="text-dark fw-medium">$26.50</span>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="card-footer border-top-0 bg-light">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+              <span>Estimated total:</span>
+              <span class="text-dark fw-medium">$2,105.90</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 flex-row ">
+          <a href="#!" class="btn btn-outline-primary w-100"><span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V7L15 2Z"
+                  stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 2V6C14 6.53043 14.2107 7.03914 14.5858 7.41421C14.9609 7.78929 15.4696 8 16 8H20"
+                  stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 9H8" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 13H8" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 17H8" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>Download invoice</a>
+          <a href="#!" class="btn btn-outline-primary w-100"><span>
+
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 12H10" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 8H10" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 17V5C19 4.46957 18.7893 3.96086 18.4142 3.58579C18.0391 3.21071 17.5304 3 17 3H4"
+                  stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M8 21H20C20.5304 21 21.0391 20.7893 21.4142 20.4142C21.7893 20.0391 22 19.5304 22 19V18C22 17.7348 21.8946 17.4804 21.7071 17.2929C21.5196 17.1054 21.2652 17 21 17H11C10.7348 17 10.4804 17.1054 10.2929 17.2929C10.1054 17.4804 10 17.7348 10 18V19C10 19.5304 9.78929 20.0391 9.41421 20.4142C9.03914 20.7893 8.53043 21 8 21ZM8 21C7.46957 21 6.96086 20.7893 6.58579 20.4142C6.21071 20.0391 6 19.5304 6 19V5C6 4.46957 5.78929 3.96086 5.41421 3.58579C5.03914 3.21071 4.53043 3 4 3C3.46957 3 2.96086 3.21071 2.58579 3.58579C2.21071 3.96086 2 4.46957 2 5V7C2 7.26522 2.10536 7.51957 2.29289 7.70711C2.48043 7.89464 2.73478 8 3 8H6"
+                  stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>Download summary</a>
+        </div>
+      </div>
+      <div class="d-grid mt-11">
+        <a href="#!" class="btn btn-primary">Change the delivery time</a>
+      </div>
+    </div>
+  </div>
+  @@include("partials/footer.html") @@include("partials/btn-scroll-top.html")
+  @@include("partials/scripts.html")
+
+  <script src="@@webRoot/assets/js/vendors/flag.js"></script>
+
+  <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+  <script src="@@webRoot/assets/js/vendors/btn-scrolltop.js"></script>
+  <script src="@@webRoot/assets/js/vendors/sidenav.js"></script>
+  <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+</body>
+
+</html>

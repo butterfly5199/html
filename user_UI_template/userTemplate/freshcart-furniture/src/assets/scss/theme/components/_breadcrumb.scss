@@ -1,0 +1,9 @@
+// Breadcrumb
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  &::before {
+    line-height: 1;
+  }
+}

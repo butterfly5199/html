@@ -1,0 +1,60 @@
+// Transitions
+
+// Image zoom
+.zoom-img {
+   border-radius: $border-radius-lg;
+   transform: translateZ(0);
+   overflow: hidden;
+   & img {
+      display: block;
+      transition: transform 0.35s ease-in-out;
+   }
+   &:hover img {
+      transform: scale(1.05);
+   }
+}
+
+// Marquee
+.marquee {
+   position: relative;
+   width: 100vw;
+   max-width: 100%;
+
+   overflow: hidden;
+
+   .track {
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 100s linear infinite;
+   }
+   .text-track {
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 10s linear infinite;
+   }
+   .track-2 {
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee-left 100s linear infinite;
+   }
+}
+
+@keyframes marquee {
+   from {
+      transform: translateX(0);
+   }
+
+   to {
+      transform: translateX(-50%);
+   }
+}
+
+@keyframes marquee-left {
+   to {
+      transform: translateX(0);
+   }
+
+   from {
+      transform: translateX(-50%);
+   }
+}

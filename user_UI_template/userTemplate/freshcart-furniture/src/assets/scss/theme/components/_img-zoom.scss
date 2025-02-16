@@ -1,0 +1,70 @@
+// Images
+
+.img-hover {
+  overflow: hidden;
+  img {
+    transition: transform 0.35s ease-in-out;
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+  .zoom-icon {
+    opacity: 0;
+    transition: transform 0.2s ease-in-out;
+    background-color: $primary;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    .zoom-icon {
+      opacity: 1;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+//change the whole image used as the star. Make sure to set starSize in options if not 16px.
+//first image is for the 'off' mode
+.star-rating {
+  background: url("../images/svg/myStar_off.svg") !important;
+}
+
+//add style for 'on' mode
+.star-rating .star-value {
+  background: url("../images/svg/myStar_on.svg") !important;
+}
+
+/* Image and video preview styling */
+#previewContainer img,
+#previewContainer video {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Styling the custom upload button */
+
+/* Delete button styling (hidden by default) */
+.delete-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+/* Show delete button on hover */
+.file-preview:hover .delete-btn {
+  opacity: 1;
+}

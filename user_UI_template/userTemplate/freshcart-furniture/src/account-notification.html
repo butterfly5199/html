@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="@@webRoot/node_modules/swiper/swiper-bundle.min.css" />
+    @@include("partials/head-links.html")
+
+    <title>Account Notification eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+    @@include("partials/top-bar.html") @@include("partials/navbar.html")
+    <section class="py-lg-8 py-5">
+        <div class="container">
+            <div class="row">
+                <!--Account sidebar start-->
+                <div class="col-lg-3 col-md-4">
+
+                    @@include("partials/navbar-account.html")
+                </div>
+                <!--Account sidebar end-->
+                <div class="col-lg-9 col-md-8">
+                    <div class="row g-3 mb-4 ">
+                        <div class="col-lg-9">
+                            <h1 class="mb-0 h2">Notification Preferences</h1>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="row ">
+                        <!--Notification-->
+                        <div class="col-12">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3 border p-4">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div>
+                                            <h2 class="mb-0 h5">Account security alerts</h2>
+                                            <small>Receive notifications about any suspicious account activity or
+                                                changes to
+                                                your
+                                                login credentials for enhanced security.</small>
+                                        </div>
+                                        <div class="">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="flexSwitchCheckChecked" checked>
+                                                <label class="form-check-label visually-hidden"
+                                                    for="flexSwitchCheckChecked">Checked
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-flex gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked1">
+                                            <label class="form-check-label" for="flexCheckChecked1">
+                                                SMS
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked2" checked>
+                                            <label class="form-check-label" for="flexCheckChecked2">
+                                                Email
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked3">
+                                            <label class="form-check-label" for="flexCheckChecked3">
+                                                App push notifications
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border p-4">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div>
+                                            <h2 class="mb-0 h5">Customer support updates</h2>
+                                            <small>Get updates on any inquiries or support tickets you've submitted,
+                                                ensuring timely resolution of any issues.</small>
+                                        </div>
+                                        <div class="">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="flexSwitchCheckSupport">
+                                                <label class="form-check-label visually-hidden"
+                                                    for="flexSwitchCheckSupport">Checked
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border p-4">
+                                    <div class="d-flex flex-column gap-4">
+                                        <div>
+                                            <h2 class="mb-0 h5">Order Updates</h2>
+                                            <small>Get real-time updates on your orders, including shipment status and
+                                                delivery confirmation.</small>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckCheckedSms">
+                                                <label class="form-check-label" for="flexCheckCheckedSms">
+                                                    SMS
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckCheckedMess">
+                                                <label class="form-check-label" for="flexCheckCheckedMess">
+                                                    Messages in WhatsApp
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckCheckedEmail" checked>
+                                                <label class="form-check-label" for="flexCheckCheckedEmail">
+                                                    Email
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckCheckedApp">
+                                                <label class="form-check-label" for="flexCheckCheckedApp">
+                                                    App push notifications
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    @@include("partials/footer.html") @@include("partials/btn-scroll-top.html")@@include("partials/addtocart.html")
+    @@include("partials/scripts.html")
+
+
+
+
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+    <script src="@@webRoot/assets/js/vendors/flag.js"></script>
+    <script src="@@webRoot/assets/js/vendors/add-to-cart.js"></script>
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+    <script src="@@webRoot/assets/js/vendors/btn-scrolltop.js"></script>
+    <script src="@@webRoot/assets/js/vendors/sidenav.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/password.js"></script>
+    <script src="@@webRoot/node_modules/imask/dist/imask.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/inputmask.js"></script>
+
+</body>
+
+</html>

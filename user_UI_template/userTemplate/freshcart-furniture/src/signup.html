@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	@@include("partials/head-links.html")
+
+	<title>Sign Up eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+	<!--Signup start-->
+	<div class="vh-100"
+		style="background: url(./assets/images/jpg/login-bg.jpg) no-repeat; background-position: center; background-size: cover">
+		<div class="h-100 d-flex flex-column justify-content-center">
+			<div class="container">
+				<!--Signup form-->
+				<div class="row">
+					<div class="col-xl-5 col-lg-7">
+						<div class="card  mx-4 border-0">
+							<div class="card-body p-md-6 p-4">
+								<div class="mb-5 text-center">
+									<a href="./index.html"><img src="./assets/images/logo/logo.svg" alt="" /></a>
+								</div>
+								<div class="mb-3">
+									<h1 class="fs-4 mb-0">Create an account</h1>
+								</div>
+
+								<!-- form -->
+								<form class="needs-validation" novalidate>
+									<div class="row g-3">
+										<!-- col -->
+										<div class="col-md-6 col-12">
+											<!-- input -->
+											<label for="formSignupfname" class="form-label visually-hidden">First
+												Name</label>
+											<input type="text" class="form-control" id="formSignupfname"
+												placeholder="First Name" required />
+											<div class="invalid-feedback">Please enter first name.</div>
+										</div>
+										<div class="col-md-6 col-12">
+											<!-- input -->
+											<label for="formSignuplname" class="form-label visually-hidden">Last
+												Name</label>
+											<input type="text" class="form-control" id="formSignuplname"
+												placeholder="First Name" required />
+											<div class="invalid-feedback">Please enter last name.</div>
+										</div>
+										<div class="col-12">
+											<!-- input -->
+											<label for="formSignupEmail" class="form-label visually-hidden">Email
+												address</label>
+											<input type="email" class="form-control" id="formSignupEmail"
+												placeholder="Email" required />
+											<div class="invalid-feedback">Please enter email.</div>
+										</div>
+										<div class="col-12">
+											<div class="password-field position-relative">
+												<label for="formSignupPassword"
+													class="form-label visually-hidden">Password</label>
+												<div class="password-field position-relative">
+													<input type="password" class="form-control fakePassword"
+														id="formSignupPassword" placeholder="*****" required />
+													<span><i class="bi bi-eye-slash passwordToggler"></i></span>
+													<div class="invalid-feedback">Please enter password.</div>
+												</div>
+											</div>
+										</div>
+										<!-- btn -->
+										<div class="col-12 d-grid"><button type="submit"
+												class="btn btn-primary">Register</button></div>
+
+										<div class="col-12">
+											<!-- text -->
+											<p class="mb-2">
+												I already have an account
+												<a href="./signin.html" class="text-link">Sign In</a>
+											</p>
+											<p class="mb-0">
+												<small>
+													By continuing, you agree to our
+													<a href="#!" class="text-link">Terms of Service</a>
+													&
+													<a href="#!" class="text-link">Privacy Policy</a>
+												</small>
+											</p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Signup end-->
+	@@include("partials/scripts.html")
+	<script src="@@webRoot/assets/js/vendors/password.js"></script>
+	<script src="@@webRoot/assets/js/vendors/validation.js"></script>
+</body>
+
+</html>

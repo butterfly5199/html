@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="@@webRoot/node_modules/nouislider/dist/nouislider.min.css" rel="stylesheet" />
+    @@include("../../partials/head-links.html")
+
+
+    <title>Nouislider - eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+    <!--Main wrapper start-->
+    <main class="docs-main-wrapper">
+        @@include("../../partials/docs-navbar.html")
+        <!-- left sidebar -->
+        @@include("../../partials/docs-sidenav.html")
+        <!--Wrapper start-->
+        <div class="docs-wrapper">
+            <div class="docs-content">
+                <!-- Content -->
+                <div class="container">
+                    <div class="row mb-lg-7 mb-5">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="mb-5" id="intro">
+                                <h1>Nouislider</h1>
+                                <p class="mb-0">noUiSlider: lightweight JavaScript range slider with full touch support
+                                </p>
+                            </div>
+                            <div class="alert alert-info gap-3">
+                                <div class="d-flex gap-3 lh-1 mb-3">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16">
+                                            </path>
+                                            <path
+                                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <p class="mb-0">Requires CSS and JS. (Note: if you are using our dist folder then
+                                        will get libs
+                                        folder in it.)</p>
+                                </div>
+                                <div class="ms-5">
+
+                                    <div class="my-2 fw-semibold">
+
+                                        assets/libs/nouislider/dist/nouislider.min.css<br>
+                                        assets/libs/nouislider/dist/nouislider.min.js<br>
+                                        assets/libs/wnumb/wNumb.min.js <br>
+                                        assets/js/theme.min.js
+
+                                    </div>
+
+                                    <div class="mt-4">
+                                        Note that this component requires the use of the third-party
+                                        <a href="https://refreshless.com/nouislider/" class="alert-link"
+                                            target="_blank">NouiSlider</a>
+                                        plugin.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- price range -->
+                    <div class="border rounded mb-lg-7 mb-5">
+                        <div class="row align-items-center py-2 px-3">
+                            <div class="col-lg-8 col-xl-9 col-7">
+                                <div>
+                                    <h2 class="text-truncate h5 mb-0">Basic </h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xl-3 col-5 d-flex justify-content-end">
+                                <ul class="nav nav-pills nav-custom-pill" id="pills-tabTwo" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-priceRange-preview-tab"
+                                            data-bs-toggle="pill" href="#pills-priceRange-preview" role="tab"
+                                            aria-controls="pills-priceRange-preview" aria-selected="true">
+                                            <span class="lh-1"><i class="bi bi-eye"></i></span>
+                                            <span class="ms-2 d-none d-lg-block">Preview</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-priceRange-code-tab" data-bs-toggle="pill"
+                                            href="#pills-priceRange-code" role="tab"
+                                            aria-controls="pills-priceRange-code" aria-selected="false">
+                                            <span class="lh-1"><i class="bi bi-code"></i></span>
+                                            <span class="ms-2 d-none d-lg-block">Code</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tab-content border-top p-3" id="pills-tabTwoContent">
+                                    <div class="tab-pane tab-example-preview fade show active"
+                                        id="pills-priceRange-preview" role="tabpanel"
+                                        aria-labelledby="pills-priceRange-preview-tab">
+                                        <div class="mt-3">
+                                            <!-- range -->
+                                            <div id="priceRange" class="mb-3"></div>
+
+                                            <span id="priceRange-value"
+                                                class="small d-flex justify-content-between"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane tab-example-code fade" id="pills-priceRange-code"
+                                        role="tabpanel" aria-labelledby="pills-price range-code-tab">
+                                        <pre class="language-markup" tabindex="0"><code class="language-markup"> <span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mt-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token comment">&lt;!-- range --&gt;</span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>div</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>priceRange<span
+                                                            class="token punctuation">"</span></span> <span
+                                                        class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>mb-3<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;</span>span</span> <span
+                                                        class="token attr-name">id</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>priceRange-value<span
+                                                            class="token punctuation">"</span></span>
+                                                    <span class="token attr-name">class</span><span
+                                                        class="token attr-value"><span
+                                                            class="token punctuation attr-equals">=</span><span
+                                                            class="token punctuation">"</span>small d-flex
+                                                        justify-content-between<span
+                                                            class="token punctuation">"</span></span><span
+                                                        class="token punctuation">&gt;</span></span><span
+                                                    class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>span</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                                <span class="token tag"><span class="token tag"><span
+                                                            class="token punctuation">&lt;/</span>div</span><span
+                                                        class="token punctuation">&gt;</span></span>
+                                            </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  price range  -->
+
+                </div>
+            </div>
+            @@include("../../partials/docs-footer.html")
+        </div>
+        <!--Wrapper end-->
+    </main>
+    <!--Main wrapper end-->
+
+    <!-- Scripts -->
+    <script src="@@webRoot/node_modules/nouislider/dist/nouislider.min.js"></script>
+    <script src="@@webRoot/node_modules/wnumb/wNumb.min.js"></script>
+    @@include("../../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+    <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/sidebar-menu.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/search.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+// simplebar
+.simplebar-track {
+  background-color: $gray-100;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 4px;
+}
+
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: #000000;
+  border-radius: 7px;
+  left: -2px;
+  right: -2px;
+  opacity: 0;
+  transition: opacity 0.2s 0.5s linear;
+}
+
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 2px;
+}

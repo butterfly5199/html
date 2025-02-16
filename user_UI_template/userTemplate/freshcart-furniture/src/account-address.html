@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="@@webRoot/node_modules/swiper/swiper-bundle.min.css" />
+    @@include("partials/head-links.html")
+
+    <title>Account Address eCommerce HTML Template - FreshCart Furniture</title>
+</head>
+
+<body>
+    @@include("partials/top-bar.html") @@include("partials/navbar.html")
+    <section class="py-lg-8 py-5">
+        <div class="container">
+            <div class="row">
+                <!--Account sidebar start-->
+                <div class="col-lg-3 col-md-4">
+
+                    @@include("partials/navbar-account.html")
+                </div>
+                <!--Account sidebar end-->
+                <div class="col-lg-9 col-md-8">
+                    <div class="row g-3 mb-4 align-items-center">
+                        <div class="col-xl-9 col-md-6 col-4">
+                            <h1 class="mb-0 h2">Addresses</h1>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-8 text-end">
+                            <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addressModal">+
+                                Add address</a>
+                        </div>
+                    </div>
+                    <!--Address-->
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-12">
+                            <div class="card h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-4">
+                                    <div class="d-flex flex-row align-items-center justify-content-between">
+                                        <div class="d-flex flex-row gap-3">
+                                            <h2 class="mb-0 h5">Shipping address</h2> <span><span
+                                                    class="badge text-bg-info">Primary</span></span>
+                                        </div>
+                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#basicModal"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-pencil text-body-tertiary"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                                            </svg></a>
+                                    </div>
+                                    <div>
+                                        <address class="mb-0">
+                                            New York 11741, USA<br>
+                                            396 Lillian Bolavandy, Holbrook
+
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="card h-100">
+                                <div class="card-body d-flex flex-column gap-3 p-4">
+                                    <div class="d-flex flex-row align-items-center justify-content-between">
+                                        <h2 class="mb-0 h5">Alternative shipping address</h2>
+                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#alternetModal"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-pencil text-body-tertiary"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                                            </svg></a>
+                                    </div>
+                                    <div>
+                                        <address class="mb-0">
+                                            Florida 32806, USA<br>
+                                            514 S. Magnolia St., Orlando
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    @@include("partials/footer.html") @@include("partials/btn-scroll-top.html")@@include("partials/addtocart.html")
+    @@include("partials/scripts.html")
+    <!--modal-->
+    <!--address-->
+    <div class="modal fade" id="addressModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="modal-title fs-3">Add new address</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div>
+                        <form class="row needs-validation" novalidate>
+
+
+                            <div class="mb-3 col-12">
+                                <select data-choices data-choices-removeitembutton="true"
+                                    data-choices-classname="form-select" aria-label="Default select example">
+                                    <option value="">Country</option>
+                                    <option value="india">India</option>
+                                    <option value="uk">Uk</option>
+                                    <option value="usa">Usa</option>
+                                    <option value="uae">Uae</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <select data-choices data-choices-removeitembutton="true"
+                                    data-choices-classname="form-select">
+                                    <option value="">State</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="northern ireland">Northern Ireland</option>
+                                    <option value="alaska">Alaska</option>
+                                    <option value="abu dhabi">Abu Dhabi</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="accountReviewCode" class="form-label visually-hidden">ZIP code</label>
+                                <input type="text" id="accountReviewCode" class="form-control" placeholder="ZIP code"
+                                    required />
+                                <div class="invalid-feedback">Please enter zip code.</div>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="accountReviewAdress" class="form-label visually-hidden">Address</label>
+                                <input type="text" id="accountReviewAdress" class="form-control" placeholder="Address"
+                                    required />
+                                <div class="invalid-feedback">Please enter address.</div>
+                            </div>
+                            <div class="d-flex gap-3 mb-3">
+
+
+                                <button type="submit" class="btn btn-primary w-100">Save changes</button>
+                                <button type="submit" class="btn btn-secondary w-100" data-bs-dismiss="modal"
+                                    data-bs-target="#addressModal">Close</button>
+                            </div>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1"
+                                        required>
+                                    <!-- label -->
+                                    <label class="form-check-label" for="flexCheckDefault1">Set as primary
+                                        address</label>
+                                    <div class="invalid-feedback">
+                                        You must agree.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--address-->
+    <!--shipping-->
+    <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex flex-row gap-3">
+                            <h2 class="mb-0 h5">Basic info</h2> <span><span
+                                    class="badge text-bg-info">Primary</span></span>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div>
+                        <form class="row needs-validation" novalidate>
+
+
+                            <div class="mb-3 col-12">
+                                <select data-choices data-choices-removeitembutton="true"
+                                    data-choices-classname="form-select">
+                                    <option value="">Country</option>
+                                    <option selected>USA</option>
+                                    <option value="India">India</option>
+
+                                    <option value="UK">UK</option>
+                                    <option value="UAE">UAE</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <select data-choices data-choices-removeitembutton="true"
+                                    data-choices-classname="form-select">
+                                    <option value="">State</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option selected>New York</option>
+                                    <option value="alaska">Alaska</option>
+                                    <option value="abu dhabi">Abu Dhabi</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="accountaddressNumber" class="form-label visually-hidden">11741</label>
+                                <input type="text" id="accountaddressNumber" class="form-control" placeholder="11741"
+                                    required />
+                                <div class="invalid-feedback">Please enter number.</div>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="accountReviewAdress2" class="form-label visually-hidden">396 Lillian
+                                    bolavandy, Holbrook</label>
+                                <input type="text" id="accountReviewAdress2" class="form-control"
+                                    placeholder="396 Lillian bolavandy, Holbrook" required />
+                                <div class="invalid-feedback">Please enter address.</div>
+                            </div>
+
+                            <div class="d-flex gap-3 mb-3">
+
+
+                                <button type="submit" class="btn btn-primary w-100">Save changes</button>
+                                <button type="submit" class="btn btn-secondary w-100" data-bs-dismiss="modal"
+                                    data-bs-target="#basicModal">Close</button>
+                            </div>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2"
+                                        required>
+                                    <!-- label -->
+                                    <label class="form-check-label" for="flexCheckDefault2">Set as primary
+                                        address</label>
+                                    <div class="invalid-feedback">
+                                        You must agree.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--shipping-->
+    <!--shipping-->
+    <div class="modal fade" id="alternetModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-xl-center mb-4">
+                        <h2 class="mb-0 h5">Alternative shipping address</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div>
+                        <form class="row needs-validation" novalidate>
+
+
+                            <div class="mb-3 col-12">
+                                <select data-choices data-choices-removeitembutton="true"
+                                    data-choices-classname="form-select">
+                                    <option value="">Country</option>
+                                    <option value="India">India</option>
+                                    <option value="UK">UK</option>
+                                    <option selected>USA</option>
+                                    <option value="UAE">UAE</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <select data-choices data-choices-removeitembutton="true"
+                                    data-choices-classname="form-select">
+                                    <option value="">State</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option selected>Florida</option>
+                                    <option value="alaska">Alaska</option>
+                                    <option value="abu dhabi">Abu Dhabi</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="accountaddressNumber2" class="form-label visually-hidden">32806</label>
+                                <input type="text" id="accountaddressNumber2" class="form-control" placeholder="32806"
+                                    required />
+                                <div class="invalid-feedback">Please enter number.</div>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="accountReviewAdress3" class="form-label visually-hidden">514 s, Magnolia St,
+                                    Orlando</label>
+                                <input type="text" id="accountReviewAdress3" class="form-control"
+                                    placeholder="514 s, Magnolia St, Orlando" required />
+                                <div class="invalid-feedback">Please enter address.</div>
+                            </div>
+
+                            <div class="d-flex gap-3 mb-3">
+
+
+                                <button type="submit" class="btn btn-primary w-100">Save changes</button>
+                                <button type="submit" class="btn btn-secondary w-100" data-bs-dismiss="modal"
+                                    data-bs-target="#alternetModal">Close</button>
+                            </div>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3"
+                                        required>
+                                    <!-- label -->
+                                    <label class="form-check-label" for="flexCheckDefault3">Set as primary
+                                        address</label>
+                                    <div class="invalid-feedback">
+                                        You must agree.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--shipping-->
+
+
+
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+    <script src="@@webRoot/assets/js/vendors/flag.js"></script>
+    <script src="@@webRoot/assets/js/vendors/add-to-cart.js"></script>
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+    <script src="@@webRoot/assets/js/vendors/btn-scrolltop.js"></script>
+    <script src="@@webRoot/assets/js/vendors/sidenav.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/password.js"></script>
+    <script src="@@webRoot/node_modules/imask/dist/imask.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/inputmask.js"></script>
+
+</body>
+
+</html>
