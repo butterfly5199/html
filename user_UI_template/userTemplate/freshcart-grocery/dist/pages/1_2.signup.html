@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta content="Codescandy" name="author">
-  <title>Sign in eCommerce HTML Template - FreshCart</title>
+  <title>회원가입(Sign up) - 점메추</title>
   <!-- Favicon icon-->
   <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
@@ -30,7 +30,7 @@
           <img src="../assets/images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top">
         </a>
         <span class="navbar-text">
-          Already have an account? <a href="../pages/signin.html">Sign in</a>
+          이미 아이디(계정)가 있나요? <a href="../pages/signin.html">로그인(Sign in)</a>
         </span>
       </div>
     </nav>
@@ -39,62 +39,109 @@
 
   <main>
     <!-- section -->
+
     <section class="my-lg-14 my-8">
+      <!-- container -->
       <div class="container">
         <!-- row -->
         <div class="row justify-content-center align-items-center">
           <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
             <!-- img -->
-            <img src="../assets/images/svg-graphics/signin-g.svg" alt="" class="img-fluid" />
+            <img src="../assets/images/svg-graphics/signup-g.svg" alt="" class="img-fluid" />
           </div>
           <!-- col -->
           <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
             <div class="mb-lg-9 mb-5">
-              <h1 class="mb-1 h2 fw-bold">Sign in to FreshCart</h1>
-              <p>Welcome back to FreshCart! Enter your email to get started.</p>
+              <h1 class="mb-1 h2 fw-bold">회원가입(Get Start Shopping)</h1>
+              <p>[점메추]에 오신것을 환영합니다! 시작하기 위해 이메일 주소를 입력해주세요.</p>
             </div>
-
+            <!-- form -->
             <form class="needs-validation" novalidate>
               <div class="row g-3">
-                <!-- row -->
-
-                <div class="col-12">
+                <!-- col -->
+                <div class="col-6">
                   <!-- input -->
-                  <label for="formSigninEmail" class="form-label visually-hidden">Email address</label>
-                  <input type="email" class="form-control" id="formSigninEmail" placeholder="Email" required />
-                  <div class="invalid-feedback">Please enter name.</div>
+                  <label for="formSignupfname" class="form-label visually-hidden">이름(First Name)</label>
+                  <input type="text" class="form-control" id="formSignupfname" placeholder="이름" required />
+                  <div class="invalid-feedback">이름을 입력해주세요.</div>
+                </div>
+
+                <div class="col-6">
+                  <!-- input -->
+                  <label for="formSignuplname" class="form-label visually-hidden">성(Last Name)</label>
+                  <input type="text" class="form-control" id="formSignuplname" placeholder="성" required />
+                  <div class="invalid-feedback">성(姓)을 입력해주세요.</div>
+                </div>
+                <div class="col">
+                  <!-- input -->
+                  <label for="formSignupEmail" class="form-label visually-hidden">이메일(Email address)</label>
+                  <input type="email" class="form-control" id="formSignupEmail1" placeholder="이메일" required />
+                  <!-- <p>@</p>
+                  <input type="email" class="form-control" id="formSignupEmail2" placeholder="ex)naver.com" required />
+                  <div class="invalid-feedback">이메일을 입력해주세요.</div> -->
                 </div>
                 <div class="col-12">
-                  <!-- input -->
                   <div class="password-field position-relative">
-                    <label for="formSigninPassword" class="form-label visually-hidden">Password</label>
+                    <label for="formSignupPassword" class="form-label visually-hidden">비밀번호(Password)</label>
                     <div class="password-field position-relative">
-                      <input type="password" class="form-control fakePassword" id="formSigninPassword"
-                        placeholder="*****" required />
+                      <input type="password" class="form-control fakePassword" id="formSignupPassword"
+                        placeholder="비밀번호" required />
                       <span><i class="bi bi-eye-slash passwordToggler"></i></span>
-                      <div class="invalid-feedback">Please enter password.</div>
+                      <div class="invalid-feedback">비밀번호를 입력해주세요.</div>
                     </div>
                   </div>
                 </div>
-                <div class="d-flex justify-content-between">
-                  <!-- form check -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    <!-- label -->
-                    <label class="form-check-label" for="flexCheckDefault">Remember me</label>
-                  </div>
-                  <div>
-                    Forgot password?
-                    <a href="../pages/forgot-password.html">Reset It</a>
-                  </div>
+                <div class="form-check col-4">
+                  <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                  <label class="form-check-label" for="flexRadioDefault1">남성(male)
+                  </label>
                 </div>
+                <div class="form-check col-4">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">여성(female)
+                  </label>
+                </div>
+              <div class="row g-3"> 
+                <div class="col" id="info__birth">
+                  <label for="formSignupdob" class="form-label visually-hidden">출생년도</label>
+                  <input type="text" class="form-control" id="formSignupYear" placeholder="출생년도" required />
+                  <div class="invalid-feedback">출생년도를 입력해주세요.</div>
+                </div>
+                <div class="col" id="info__birth">
+                  <label for="formSignupdob" class="form-label visually-hidden">월</label>
+                  <input type="text" class="form-control" id="formSignupMonth" placeholder="월" required />
+                  <div class="invalid-feedback">태어난 달(월)을 입력해주세요.</div>
+                </div>
+                <div class="col" id="info__birth">
+                  <label for="formSignupdob" class="form-label visually-hidden">일</label>
+                  <input type="text" class="form-control" id="formSignupdate" placeholder="일" required />
+                  <div class="invalid-feedback">태어난 날짜(일)를 입력해주세요.</div>
+                </div>
+              </div>
+
+                  <!-- <select class="box" id="birth-year" style="height: 40px; width: 133px; border-radius: 10%; color: grey;">
+                    <option selected >출생 연도</option>
+                  </select>
+                  <select class="box" id="birth-month" style="height: 40px; width: 133px; border-radius: 10%; color: grey">
+                    <option selected >월</option>
+                  </select>
+                  <select class="box" id="birth-day" style="height: 40px; width: 133px; border-radius: 10%; color: grey">
+                    <option selected>일</option>
+                  </select> -->
+                </div>
+
+          </div>
                 <!-- btn -->
-                <div class="col-12 d-grid"><button type="submit" class="btn btn-primary">Sign In</button></div>
-                <!-- link -->
-                <div>
-                  Don’t have an account?
-                  <a href="../pages/signup.html">Sign Up</a>
-                </div>
+                <div class="col-12 d-grid"><button type="submit" class="btn btn-primary">등록</button></div>
+
+                <!-- text -->
+                <p>
+                  <small>
+                    회원가입을 위해,
+                    <a href="#!">서비스 조건 및 개인정보보호 정책(Privacy Policy)에</a>                   &
+                    <br>동의해주세요.
+                  </small>
+                </p>
               </div>
             </form>
           </div>
@@ -273,6 +320,7 @@
   <script src="../assets/js/theme.min.js"></script>
 
   <script src="../assets/js/vendors/password.js"></script>
+
   <script src="../assets/js/vendors/validation.js"></script>
 </body>
 
