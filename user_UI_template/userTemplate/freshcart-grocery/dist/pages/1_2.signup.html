@@ -29,8 +29,8 @@
         <a class="navbar-brand" href="../index.html">
           <img src="../assets/images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top">
         </a>
-        <span class="navbar-text">
-          이미 아이디(계정)가 있나요? <a href="../pages/signin.html">로그인(Sign in)</a>
+        <span class="navbar-text" style="color: blue; font-weight:bold ;">
+          이미 회원가입을 하셨나요? <a href="../pages/1_1.signin.html">로그인(Sign in)</a>
         </span>
       </div>
     </nav>
@@ -53,7 +53,8 @@
           <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
             <div class="mb-lg-9 mb-5">
               <h1 class="mb-1 h2 fw-bold">회원가입(Get Start Shopping)</h1>
-              <p>[점메추]에 오신것을 환영합니다! 시작하기 위해 이메일 주소를 입력해주세요.</p>
+              <p style="color: chocolate; text-align: center; font-size: large; font-weight: bold;">[점메추]에 오신것을 환영합니다! 
+              <br>시작하기 위해 아래와 같이 입력해주세요.</p>
             </div>
             <!-- form -->
             <form class="needs-validation" novalidate>
@@ -75,7 +76,7 @@
                 <div class="col">
                   <!-- input -->
                   <label for="formSignupEmail" class="form-label visually-hidden">이메일(Email address)</label>
-                  <input type="email" class="form-control" id="formSignupEmail1" placeholder="이메일" required />
+                  <input type="email" class="form-control" id="formSignupEmail1" placeholder="이메일(예.example@lmr.com)" required />
                   <!-- <p>@</p>
                   <input type="email" class="form-control" id="formSignupEmail2" placeholder="ex)naver.com" required />
                   <div class="invalid-feedback">이메일을 입력해주세요.</div> -->
@@ -85,9 +86,20 @@
                     <label for="formSignupPassword" class="form-label visually-hidden">비밀번호(Password)</label>
                     <div class="password-field position-relative">
                       <input type="password" class="form-control fakePassword" id="formSignupPassword"
-                        placeholder="비밀번호" required />
+                        placeholder="비밀번호(영문 대.소문자, 숫자, 특수문자)" required />
                       <span><i class="bi bi-eye-slash passwordToggler"></i></span>
-                      <div class="invalid-feedback">비밀번호를 입력해주세요.</div>
+                      <div class="invalid-feedback">비밀번호를 입력해주세요.(영문 대.소문자, 숫자, 특수문자)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class=""col-12>
+                  <div class="password-field position-relative">
+                    <label for="formSignupPassword" class="form-label visually-hidden">비밀번호 확인</label>
+                    <div class="password-field position-relative">
+                      <input type="password" class="form-control checkPassword" id="formSignupPasswordCheck"
+                      placeholder="비밀번호 확인" required/>
+                      <span><i class="bi bi-eye-slash passwordToggler"></i></span>
+                      <div class="invalid-feedback">한번 더 입력해주세요.</div>
                     </div>
                   </div>
                 </div>
@@ -102,43 +114,30 @@
                   </label>
                 </div>
               <div class="row g-3"> 
-                <div class="col" id="info__birth">
+                <div class="col-6" id="info__birth">
                   <label for="formSignupdob" class="form-label visually-hidden">출생년도</label>
-                  <input type="text" class="form-control" id="formSignupYear" placeholder="출생년도" required />
+                  <input type="text" class="form-control" id="formSignupYear" placeholder="출생년도(yyyy)" required />
                   <div class="invalid-feedback">출생년도를 입력해주세요.</div>
                 </div>
-                <div class="col" id="info__birth">
+                <div class="col-3" id="info__birth">
                   <label for="formSignupdob" class="form-label visually-hidden">월</label>
-                  <input type="text" class="form-control" id="formSignupMonth" placeholder="월" required />
+                  <input type="text" class="form-control" id="formSignupMonth" placeholder="월(mm)" required />
                   <div class="invalid-feedback">태어난 달(월)을 입력해주세요.</div>
                 </div>
-                <div class="col" id="info__birth">
+                <div class="col-3" id="info__birth">
                   <label for="formSignupdob" class="form-label visually-hidden">일</label>
-                  <input type="text" class="form-control" id="formSignupdate" placeholder="일" required />
+                  <input type="text" class="form-control" id="formSignupdate" placeholder="일(dd)" required />
                   <div class="invalid-feedback">태어난 날짜(일)를 입력해주세요.</div>
                 </div>
               </div>
-
-                  <!-- <select class="box" id="birth-year" style="height: 40px; width: 133px; border-radius: 10%; color: grey;">
-                    <option selected >출생 연도</option>
-                  </select>
-                  <select class="box" id="birth-month" style="height: 40px; width: 133px; border-radius: 10%; color: grey">
-                    <option selected >월</option>
-                  </select>
-                  <select class="box" id="birth-day" style="height: 40px; width: 133px; border-radius: 10%; color: grey">
-                    <option selected>일</option>
-                  </select> -->
-                </div>
-
-          </div>
+                <br>       
                 <!-- btn -->
                 <div class="col-12 d-grid"><button type="submit" class="btn btn-primary">등록</button></div>
-
                 <!-- text -->
-                <p>
+                <p style="font-size: medium; font-weight: bold;">
                   <small>
-                    회원가입을 위해,
-                    <a href="#!">서비스 조건 및 개인정보보호 정책(Privacy Policy)에</a>                   &
+                    회원가입을 위해,<br>
+                    <a href="#!">서비스 조건 및 개인정보보호 정책(Privacy Policy)에</a>                   
                     <br>동의해주세요.
                   </small>
                 </p>
