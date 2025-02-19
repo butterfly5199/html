@@ -332,9 +332,9 @@
 										aria-expanded="false">Home</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="../index.html">Home 1</a></li>
-										<li><a class="dropdown-item" href="../pages/index-2.html">Home 2</a></li>
+										<li><a class="dropdown-item" href="../pages/index-2_taste.html">나의 성향 파악</a></li>
 										<li><a class="dropdown-item" href="../pages/index-3.html">Home 3</a></li>
-										<li><a class="dropdown-item" href="../pages/index-4.html">Home 4</a></li>
+										<li><a class="dropdown-item" href="../pages/index-4_location.html">내 주변 맛집</a></li>
 										<li>
 											<a class="dropdown-item" href="../pages/index-5.html">Home 5</a>
 										</li>
@@ -342,7 +342,7 @@
 								</li>
 								<li class="nav-item dropdown w-100 w-lg-auto">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">Shop</a>
+										aria-expanded="false">맛집 정보</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="../pages/shop-grid.html">Shop Grid -
 												Filter</a></li>
@@ -368,11 +368,11 @@
 								</li>
 								<li class="nav-item dropdown w-100 w-lg-auto">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">Stores</a>
+										aria-expanded="false">내 주변 맛집</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="../pages/store-list.html">Store List</a></li>
-										<li><a class="dropdown-item" href="../pages/store-grid.html">Store Grid</a></li>
-										<li><a class="dropdown-item" href="../pages/store-single.html">Store Single</a>
+										<li><a class="dropdown-item" href="../pages/store-list.html">맛집 리스트</li>
+										<li><a class="dropdown-item" href="../pages/store-grid_goodStore.html">선택 맛집 상세 정보</a></li>
+										<li><a class="dropdown-item" href="../pages/store-single.html">맛집 메뉴</a>
 										</li>
 									</ul>
 								</li>
@@ -447,7 +447,7 @@
 								</li>
 								<li class="nav-item dropdown w-100 w-lg-auto">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">Pages</a>
+										aria-expanded="false">영양정보</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="../pages/blog.html">Blog</a></li>
 										<li><a class="dropdown-item" href="../pages/blog-single.html">Blog Single</a>
@@ -461,27 +461,26 @@
 								</li>
 								<li class="nav-item dropdown w-100 w-lg-auto">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">Account</a>
+										aria-expanded="false">마이페이지</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="../pages/signin.html">Sign in</a></li>
-										<li><a class="dropdown-item" href="../pages/signup.html">Signup</a></li>
-										<li><a class="dropdown-item" href="../pages/forgot-password.html">Forgot
-												Password</a></li>
+										<li><a class="dropdown-item" href="../pages/signin.html">로그인(Sign in)</a></li>
+										<li><a class="dropdown-item" href="../pages/signup.html">회원가입(Signup)</a></li>
+										<li><a class="dropdown-item" href="../pages/forgot-password.html">비밀번호 재설정(Forgot Password)</a></li>
 										<li class="dropdown-submenu dropend">
 											<a class="dropdown-item dropdown-list-group-item dropdown-toggle"
-												href="#">My Account</a>
+												href="#">계정 정보(My Account)</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item"
-														href="../pages/account-orders.html">Orders</a></li>
+														href="../pages/account-orders.html">이용내역(Orders)</a></li>
 												<li><a class="dropdown-item"
-														href="../pages/account-settings.html">Settings</a></li>
+														href="../pages/account-settings.html">설정(Settings)</a></li>
 												<li><a class="dropdown-item"
-														href="../pages/account-address.html">Address</a></li>
+														href="../pages/account-address.html">내 지역(Address)</a></li>
 												<li><a class="dropdown-item"
-														href="../pages/account-payment-method.html">Payment Method</a>
+														href="../pages/account-payment-method.html">결제방법(Payment Method)</a>
 												</li>
 												<li><a class="dropdown-item"
-														href="../pages/account-notification.html">Notification</a>
+														href="../pages/account-notification.html">알림(Notification)</a>
 												</li>
 											</ul>
 										</li>
@@ -541,43 +540,42 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content p-4">
 				<div class="modal-header border-0">
-					<h5 class="modal-title fs-3 fw-bold" id="userModalLabel">Sign Up</h5>
+					<h5 class="modal-title fs-3 fw-bold" id="userModalLabel">로그인(Sign Up)</h5>
 
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<form class="needs-validation" novalidate>
 						<div class="mb-3">
-							<label for="fullName" class="form-label">Name</label>
-							<input type="text" class="form-control" id="fullName" placeholder="Enter Your Name"
+							<label for="fullName" class="form-label">이름(Name)</label>
+							<input type="text" class="form-control" id="fullName" placeholder="이름을 입력해주세요"
 								required />
-							<div class="invalid-feedback">Please enter name.</div>
+							<div class="invalid-feedback">이름을 입력해주세요.</div>
 						</div>
 						<div class="mb-3">
-							<label for="email" class="form-label">Email address</label>
-							<input type="email" class="form-control" id="email" placeholder="Enter Email address"
+							<label for="email" class="form-label">이메일(Email address)</label>
+							<input type="email" class="form-control" id="email" placeholder="이메일을 입력해주세요"
 								required />
-							<div class="invalid-feedback">Please enter email.</div>
+							<div class="invalid-feedback">이메일을 입력해주세요.</div>
 						</div>
 						<div class="mb-3">
-							<label for="password" class="form-label">Password</label>
-							<input type="password" class="form-control" id="password" placeholder="Enter Password"
+							<label for="password" class="form-label">비밀번호(Password)</label>
+							<input type="password" class="form-control" id="password" placeholder="비밀번호를 입력해주세요"
 								required />
-							<div class="invalid-feedback">Please enter password.</div>
+							<div class="invalid-feedback">비밀번호를 입력해주세요.</div>
 							<small class="form-text">
-								By Signup, you agree to our
-								<a href="#!">Terms of Service</a>
-								&
-								<a href="#!">Privacy Policy</a>
+								회원가입을 위해
+								<a href="#!">서비스 조건 및 개인정보보호 정책(Privacy Policy)에</a>
+								동의해주세요.
 							</small>
 						</div>
 
-						<button type="submit" class="btn btn-primary" type="submit">Sign Up</button>
+						<button type="submit" class="btn btn-primary" type="submit">회원가입(Sign Up)</button>
 					</form>
 				</div>
 				<div class="modal-footer border-0 justify-content-center">
-					Already have an account?
-					<a href="#">Sign in</a>
+					이미 회원가입을 하셨나요?
+					<a href="pages/1_1.signin.html" class="form-text" style="font-weight: bold; color: green;">로그인(Sign in)</a>
 				</div>
 			</div>
 		</div>
@@ -987,8 +985,8 @@
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0">
 								<li class="breadcrumb-item"><a href="#!">Home</a></li>
-								<li class="breadcrumb-item"><a href="#!">Stores</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Store Grid</li>
+								<li class="breadcrumb-item"><a href="#!">내 주변 맛집</a></li>
+								<li class="breadcrumb-item active" aria-current="page">맛집 상세 정보</li>
 							</ol>
 						</nav>
 					</div>
