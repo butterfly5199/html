@@ -369,7 +369,7 @@
                            <li><a class="dropdown-item" href="../pages/1_2.signup.html">회원가입(Signup)</a></li>
                            <li><a class="dropdown-item" href="../pages/2. forgot-password.html">비밀번호 재설정(Forgot Password)</a></li>
                            <li class="dropdown-submenu dropend">
-                              <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">계정 정보(My Account)</a>
+                              <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">회원 정보(My Account)</a>
                               <ul class="dropdown-menu">
                                  <li><a class="dropdown-item" href="../pages/account-orders.html">이용내역(Orders)</a></li>
                                  <li><a class="dropdown-item" href="../pages/3. account-settings.html">설정(Settings)</a></li>
@@ -966,21 +966,55 @@
                <div class="col-12">
                   <div class="mb-8">
                      <!-- heading -->
-                     <h3 class="mb-0" style="color: crimson;"><< 맛 선호도 >></h3>
+                     <!-- <h3 class="mb-0" style="color: crimson;"><< 맛 선호도 >></h3> -->
                      <!-- <p class="mb-0">hot, sweet, salty, sour..</p> -->
                   </div>
                </div>
-               <select class="form-select form-select-lg mb-5" size="5" aria-label="Multiple select example" style="font-size: large; color: tomato; font-weight: bold;">
+               <!-- <select class="form-select form-select-lg mb-5" size="5" aria-label="Multiple select example" style="font-size: large; color: tomato; font-weight: bold;">
                   <option selected style="color: blue; position: relative;">어떤 맛이 좋을까?!</option>
                   <option value="1">매운맛(hot)</option>
                   <option value="2">단맛(sweet)</option>
                   <option value="3">짠맛(salty)</option>
                   <option value="4">신맛(sour)</option>
-               </select>
+               </select> -->
             </div>
-            <br>
+
+            <div class="mb-4">
+                  <h3 class="mb-0" style="color: crimson;"><< 맛 선호도 >></h3>
+               <div class="my-4">
+                  <!-- input -->
+                  <input type="search" class="form-control form-control-lg" style="color: aquamarine;" placeholder="어떤 맛이 좋을까?" />
+               </div>
+               <!-- form check -->
+               <div class="form-check mb-2">
+                  <!-- input -->
+                  <input class="form-check-input" type="checkbox" value="" id="eGrocery" checked />
+                  <label class="form-check-label" style="font-size: large; color: tomato;" for="eGrocery">매콤한 맛(Hot)</label>
+               </div>
+               <!-- form check -->
+               <div class="form-check mb-2">
+                  <!-- input -->
+                  <input class="form-check-input" type="checkbox" value="" id="DealShare" />
+                  <label class="form-check-label" style="font-size: large; color: tomato;" for="DealShare">달콤한 맛(Sweet)</label>
+               </div>
+               <!-- form check -->
+               <div class="form-check mb-2">
+                  <!-- input -->
+                  <input class="form-check-input" type="checkbox" value="" id="Dmart" />
+                  <label class="form-check-label" style="font-size: large; color: tomato;" for="Dmart">새콤한 맛(Sour)</label>
+               </div>
+               <!-- form check -->
+               <div class="form-check mb-2">
+                  <!-- input -->
+                  <input class="form-check-input" type="checkbox" value="" id="Blinkit" />
+                  <label class="form-check-label" style="font-size: large; color: tomato;" for="Blinkit">짭짤한 맛(Salty)</label>
+               </div>
+            </div>
+
+
+
             <!-- row -->
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6 g-6">
+            <div class="row row-cols-4 row-cols-lg-4 row-cols-lg-4 row-cols-xxl-6 g-6">
                <!-- col -->
                <div class="col">
                   <a href="shop-grid.html" class="text-decoration-none text-inherit">
@@ -991,7 +1025,7 @@
                            <img src="../assets/images/category/category-dairy-bread-eggs.jpg"
                               alt="Grocery Ecommerce Template" class="mb-3" />
                            <!-- text -->
-                           <div class="text-truncate">Dairy, Bread & Eggs</div>
+                           <div class="text-truncate">매콤한 맛</div>
                         </div>
                      </div>
                   </a>
@@ -1006,7 +1040,7 @@
                            <img src="../assets/images/category/category-snack-munchies.jpg"
                               alt="Grocery Ecommerce Template" class="mb-3" />
                            <!-- text -->
-                           <div class="text-truncate">Snack & Munchies</div>
+                           <div class="text-truncate">달콤한 맛</div>
                         </div>
                      </div>
                   </a>
@@ -1021,7 +1055,7 @@
                            <img src="../assets/images/category/category-bakery-biscuits.jpg"
                               alt="Grocery Ecommerce Template" class="mb-3" />
                            <!-- text -->
-                           <div class="text-truncate">Bakery & Biscuits</div>
+                           <div class="text-truncate">새콤한 맛</div>
                         </div>
                      </div>
                   </a>
@@ -1035,121 +1069,7 @@
                            <!-- img -->
                            <img src="../assets/images/category/category-instant-food.jpg"
                               alt="Grocery Ecommerce Template" class="mb-3" />
-                           <div class="text-truncate">Instant Food</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- col -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-tea-coffee-drinks.jpg"
-                              alt="Grocery Ecommerce Template" class="mb-3" />
-                           <div class="text-truncate">Tea, Coffee & Drinks</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <img src="../assets/images/category/category-fruits-vegetables.jpg"
-                              alt="Grocery Ecommerce Template" class="mb-3" />
-                           <div class="text-truncate">Fruits & Vegetables</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- col -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-cold-drinks-juices.jpg"
-                              alt="Grocery Ecommerce Template" class="mb-3" />
-                           <!-- text -->
-                           <div class="text-truncate">Cold Drinks & Juices</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- col -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-chicken-meat-fish.jpg"
-                              alt="Grocery Ecommerce Template" class="mb-3" />
-                           <div class="text-truncate">Chicken, Meat & Fish</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- col -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-baby-care.jpg" alt="Grocery Ecommerce Template"
-                              class="mb-3" />
-                           <!-- text -->
-                           <div class="text-truncate">Baby Care</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- text -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-cleaning-essentials.jpg"
-                              alt="Grocery Ecommerce Template" class="mb-3" />
-                           <!-- text -->
-                           <div class="text-truncate">Cleaning Essentials</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- col -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-pet-care.jpg" alt="Grocery Ecommerce Template"
-                              class="mb-3" />
-                           <!-- text -->
-                           <div class="text-truncate">Pet Care</div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <!-- col -->
-               <div class="col">
-                  <a href="shop-grid.html" class="text-decoration-none text-inherit">
-                     <!-- card -->
-                     <div class="card card-product">
-                        <div class="card-body text-center py-8">
-                           <!-- img -->
-                           <img src="../assets/images/category/category-atta-rice-dal.jpg"
-                              alt="Grocery Ecommerce Template" class="mb-3" />
-                           <!-- text -->
-                           <div class="text-truncate">Atta, Rice & Dal</div>
+                           <div class="text-truncate">짭짤한 맛</div>
                         </div>
                      </div>
                   </a>

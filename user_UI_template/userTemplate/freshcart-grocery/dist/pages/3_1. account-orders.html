@@ -109,7 +109,7 @@
 												</defs>
 											</svg>
 										</span>
-										Deutsch
+										Korean
 									</a>
 								</li>
 							</ul>
@@ -134,7 +134,7 @@
 					<div class="col-xxl-5 col-lg-5 d-none d-lg-block">
 						<form action="#">
 							<div class="input-group">
-								<input class="form-control rounded" type="search" placeholder="Search for products" />
+								<input class="form-control rounded" type="search" placeholder="맛집 검색" />
 								<span class="input-group-append">
 									<button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end"
 										type="button">
@@ -155,7 +155,7 @@
 						<button type="button" class="btn btn-outline-gray-400 text-muted" data-bs-toggle="modal"
 							data-bs-target="#locationModal">
 							<i class="feather-icon icon-map-pin me-2"></i>
-							Location
+							내 위치
 						</button>
 					</div>
 					<div class="col-lg-2 col-xxl-2 text-end col-md-6 col-7">
@@ -172,7 +172,7 @@
 									<span
 										class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
 										5
-										<span class="visually-hidden">unread messages</span>
+										<span class="visually-hidden">읽지않은 메세지</span>
 									</span>
 								</a>
 							</div>
@@ -200,7 +200,7 @@
 									<span
 										class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
 										1
-										<span class="visually-hidden">unread messages</span>
+										<span class="visually-hidden">읽지않은 메세지</span>
 									</span>
 								</a>
 							</div>
@@ -359,21 +359,19 @@
 										</li>
 										<li><a class="dropdown-item" href="../pages/shop-single-2.html">Shop Single
 												v2</a></li>
-										<li><a class="dropdown-item" href="../pages/shop-wishlist.html">Shop
-												Wishlist</a></li>
-										<li><a class="dropdown-item" href="../pages/shop-cart.html">Shop Cart</a></li>
+										<li><a class="dropdown-item" href="../pages/shop-wishlist.html">내가 찾은 맛집 리스트</a></li>
+										<li><a class="dropdown-item" href="../pages/shop-cart.html">맛집 이용 내역</a></li>
 										<li><a class="dropdown-item" href="../pages/shop-checkout.html">Shop
 												Checkout</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown w-100 w-lg-auto">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false">Stores</a>
+										aria-expanded="false">내 주변 맛집</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="../pages/store-list.html">Store List</a></li>
-										<li><a class="dropdown-item" href="../pages/store-grid.html">Store Grid</a></li>
-										<li><a class="dropdown-item" href="../pages/store-single.html">Store Single</a>
-										</li>
+										<li><a class="dropdown-item" href="../pages/store-list.html">맛집 리스트</a></li>
+										<!-- <li><a class="dropdown-item" href="../pages/store-grid.html">Store Grid</a></li>
+										<li><a class="dropdown-item" href="../pages/store-single.html">Store Single</a></li> -->
 									</ul>
 								</li>
 								<li class="nav-item dropdown w-100 w-lg-auto dropdown-fullwidth">
@@ -541,43 +539,42 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content p-4">
 				<div class="modal-header border-0">
-					<h5 class="modal-title fs-3 fw-bold" id="userModalLabel">Sign Up</h5>
+					<h5 class="modal-title fs-3 fw-bold" id="userModalLabel">회원가입</h5>
 
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 					<form class="needs-validation" novalidate>
 						<div class="mb-3">
-							<label for="fullName" class="form-label">Name</label>
-							<input type="text" class="form-control" id="fullName" placeholder="Enter Your Name"
+							<label for="fullName" class="form-label">이름</label>
+							<input type="text" class="form-control" id="fullName" placeholder="이름을 입력해주세요"
 								required />
-							<div class="invalid-feedback">Please enter name.</div>
+							<div class="invalid-feedback">이름을 입력해주세요.</div>
 						</div>
 						<div class="mb-3">
-							<label for="email" class="form-label">Email address</label>
-							<input type="email" class="form-control" id="email" placeholder="Enter Email address"
+							<label for="email" class="form-label">이메일</label>
+							<input type="email" class="form-control" id="email" placeholder="주소를 입력해주세요"
 								required />
-							<div class="invalid-feedback">Please enter email.</div>
+							<div class="invalid-feedback">주소를 입력해주세요.</div>
 						</div>
 						<div class="mb-3">
-							<label for="password" class="form-label">Password</label>
-							<input type="password" class="form-control" id="password" placeholder="Enter Password"
+							<label for="password" class="form-label">비밀번호</label>
+							<input type="password" class="form-control" id="password" placeholder="비밀번호를 입력해주세요"
 								required />
-							<div class="invalid-feedback">Please enter password.</div>
+							<div class="invalid-feedback">비밀번호를 입력해주세.</div>
 							<small class="form-text">
-								By Signup, you agree to our
-								<a href="#!">Terms of Service</a>
-								&
-								<a href="#!">Privacy Policy</a>
+								회원가입을 위해,
+								<a href="#!">서비스 조건 및 개인정보보호 정책(Privacy Policy)에</a>
+								동의해주세요.
 							</small>
 						</div>
 
-						<button type="submit" class="btn btn-primary" type="submit">Sign Up</button>
+						<button type="submit" class="btn btn-primary" type="submit">회원가입</button>
 					</form>
 				</div>
 				<div class="modal-footer border-0 justify-content-center">
-					Already have an account?
-					<a href="#">Sign in</a>
+					이미 회원가입을 하셨나요?
+					<a href="#">로그인</a>
 				</div>
 			</div>
 		</div>
@@ -588,7 +585,7 @@
 	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
 		<div class="offcanvas-header border-bottom">
 			<div class="text-start">
-				<h5 id="offcanvasRightLabel" class="mb-0 fs-4">Shop Cart</h5>
+				<h5 id="offcanvasRightLabel" class="mb-0 fs-4">맛집 이용 내역</h5>
 				<small>Location in 382480</small>
 			</div>
 			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
